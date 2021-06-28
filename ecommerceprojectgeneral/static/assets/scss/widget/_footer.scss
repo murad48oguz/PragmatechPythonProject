@@ -1,0 +1,67 @@
+/*--
+/*  5.2 - Footer Widget CSS
+/*----------------------------------------*/
+
+// Footer Widget Area
+.footer-widget-area {
+    margin-bottom: -40px;
+}
+
+// Footer Widget
+.footer-widget {
+    margin-bottom: 40px;
+    color: lighten($body-light, 25);
+}
+
+// Footer Widget Title
+.footer-widget-title {
+    color: $white;
+    font-size: 20px;
+    line-height: 1.2;
+    margin-bottom: 35px;
+    &::after {
+        content: '\e901';
+        font-family: $TMLawyer;
+        font-size: 9px;
+        display: block;
+        margin-top: 8px;
+        color: $primary;
+    }
+}
+
+// Footer Widget Text
+.footer-widget-text {
+    & p {
+        margin-bottom: 10px;
+        & i {
+            width: 30px;
+            color: $primary;
+            float: left;
+            line-height: 1.75;
+        }
+    }
+}
+
+// Footer Widget Link
+.footer-widget-link {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & li {
+        & + li {
+            margin-top: 5px;
+        }
+        & a {
+            padding-left: 15px;
+            position: relative;
+            &::before {
+                position: absolute;
+                left: 0;
+                top: 0;
+                content: "\f105";
+                font-family: $fontawesome;
+                color: $primary;
+            }
+        }
+    }
+}

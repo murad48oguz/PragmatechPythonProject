@@ -1,0 +1,130 @@
+/*	4.1.4 - Testimonial CSS	*/
+
+/*Testimonial*/
+.testimonial {
+	display: flex;
+	& .avatar {
+		width: 70px;
+		flex: 1 0 70px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin-top: 25px;
+		align-self: flex-start;
+		& img {
+			width: 100%;
+		}
+	}
+	& .content {
+		padding: 20px;
+		border: 2px solid #dddddd;
+		margin-top: 35px;
+		margin-left: 20px;
+		position: relative;
+		color: $white;
+		&::before {
+			content: '\f0d9';
+			font-family: $fontawesome;
+			position: absolute;
+			top: 10px;
+			left: -8px;
+			font-size: 20px;
+			color: #dddddd;
+		}
+		& p {}
+	}
+	& .meta {
+		list-style: none;
+		padding: 0;
+		display: flex;
+		flex-wrap: wrap;
+		margin-top: -55px;
+		margin-bottom: 35px;
+		font-family: $heading-font;
+		text-transform: uppercase;
+		font-size: 14px;
+		line-height: 20px;
+		color: $white;
+		margin-left: -20px;
+		& li {
+			& + li {
+				margin-left: 15px;
+				padding-left: 15px;
+				border-left: 1px solid $white;
+			}
+			&.author {
+				color: $primary;
+				font-size: 24px;
+				text-transform: capitalize;
+			}
+		}
+	}
+	// Responsive
+	@media #{$extra-small-mobile} {
+		flex-direction: column;
+		& .avatar {
+			margin-bottom: 15px;
+			margin-top: 0;
+		}
+		& .content {
+			margin-left: 0;
+			&::before {
+				display: none;
+			}
+		}
+		& .meta {
+			font-size: 12px;
+		}
+	}
+}
+
+/*Testimonial Two*/
+.testimonial-2 {
+	display: flex;
+	flex-direction: column;
+	& .avatar {
+		width: 120px;
+		flex: 1 0 120px;
+		border-radius: 50%;
+		overflow: hidden;
+		margin: 0 auto 40px;
+		& img {
+			width: 100%;
+		}
+	}
+	& .content {
+		text-align: center;
+		max-width: 350px;
+		margin: auto;
+		& p {
+			font-size: 16px;
+			line-height: 1.5;
+			margin: 0;
+		}
+		& .meta {
+			list-style: none;
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			font-size: 14px;
+			line-height: 1.5;
+			color: $body-light;
+			margin: 30px 0 0;
+			& li {
+				&.author {
+					color: $heading-color;
+					font-size: 16px;
+					font-weight: 700;
+					text-transform: capitalize;
+				}
+				& + li {
+					&::before {
+						content: "/";
+						margin: 0 5px;
+					}
+				}
+			}
+		}
+	}
+}

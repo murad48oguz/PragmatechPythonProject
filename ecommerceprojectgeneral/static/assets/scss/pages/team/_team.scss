@@ -1,0 +1,169 @@
+/*--
+/*  4.5 - Team CSS
+/*----------------------------------------*/
+
+// Team Item
+.team {
+    & .team-image {
+        display: block;
+        position: relative;
+        overflow: hidden;
+        background-color: $black;
+        &::before {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba($white, 0.5);
+            content: '';
+            transition: transform .6s;
+            transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,-100%,0);
+            opacity: 0;
+            z-index: 2;
+        }
+        & img {
+            width: 100%;
+            transition: $transition-default;
+            transform: scale(1.05);
+            opacity: 0.95;
+        }
+        &:hover {
+            &::before {
+                transform: scale3d(1.9,1.4,1) rotate3d(0,0,1,45deg) translate3d(0,100%,0);
+                opacity: 1;
+            }
+            & img {
+                transform: scale(1);
+                opacity: 0.9;
+            }
+        }
+    }
+    & .team-content {
+        margin-top: 25px;
+        & .name {
+            line-height: 1;
+            color: $body-color;
+			font-weight: 400;
+        }
+        & .title {
+            display: block;
+            margin-bottom: 15px;
+			font-weight: 500;
+        }
+        & .desc {}
+        & .read-more {
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: 600;
+            color: $heading-color;
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+}
+
+// Single Team Image
+.single-team-image {
+    & img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+// Single Team Content
+.single-team-content {
+    padding: 50px 80px 50px 50px !important;
+    align-self: center;
+    & .name {
+        font-size: 48px;
+        font-weight: 400;
+        line-height: 1;
+        margin-bottom: 13px;
+    }
+    & .title {
+        font-size: 16px;
+        line-height: 1.25;
+        display: block;
+        margin-bottom: 18px;
+    }
+    & .desc {
+        margin-bottom: 18px;
+        & p {}
+    }
+    & .single-team-socail {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -2px;
+        & a {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: rgba($heading-color, 0.15);
+            text-align: center;
+            margin: 0 2px;
+            transition: $transition-default;;
+            & i {
+                line-height: 40px;
+                font-size: 14px;
+            }
+            &:hover {
+                background-color: $primary;
+                color: $white;
+            }
+        }
+    }
+    & .single-team-contact {
+        margin-top: 50px;
+        & ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            & li {
+                overflow: autoh;
+                & + li {
+                    margin-top: 10px;
+                }
+                & i {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+                    background-color: $primary;
+                    color: $white;
+                    text-align: center;
+                    line-height: 40px;
+                    font-size: 14px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    & .widget-title {
+        padding-left: 0;
+        padding-bottom: 0;
+        border-bottom: 0;
+        margin-bottom: 30px;
+    }
+    // Responsive
+    @media #{$small-mobile} {
+        padding: 30px !important;
+        & .name {
+            font-size: 40px;
+        }
+    }
+    @media #{$extra-small-mobile} {
+        padding: 30px 15px !important;
+        max-width: 300px;
+        margin-left: auto;
+        margin-right: auto;
+        & .name {
+            font-size: 30px;
+        }
+    }
+}
+
+// Single Team Skill Section
+.single-team-skill-section {
+    background-color: lighten($primary, 36);
+}

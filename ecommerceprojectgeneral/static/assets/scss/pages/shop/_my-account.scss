@@ -1,0 +1,59 @@
+/*	4.11.5 - My Account CSS */
+
+/*Login & Register Tab List*/
+.login-register-tab-list {
+    justify-content: center;
+	margin-bottom: 50px;
+    & li {
+        font-size: 30px;
+        &::after {
+            content: ":";
+            margin: 0 15px;
+        }
+        &:last-child {
+            &::after {
+                display: none;
+            }
+        }
+        & a {
+            font-weight: 700;
+            &.active {
+                color: $primary;
+            }
+        }
+    }
+	// Responsive
+	@media #{$large-mobile} {
+		margin-bottom: 30px;
+		& li {
+			font-size: 24px;
+		}
+	}
+	@media #{$extra-small-mobile} {
+		& li {
+			font-size: 20px;
+		}
+	}
+}
+
+/*My Account Navigation*/
+.my-account-navigation {
+    display: block;
+    background-color: $grey;
+	padding: 25px 30px;
+    & li {
+        & a {
+            font-size: 14px;
+            padding: 8px 0;
+            &:hover {
+                color: $heading-color;
+            }
+            &.active {
+                color: $primary;
+            }
+            & i {
+                margin-right: 10px;
+            }
+        }
+    }
+}

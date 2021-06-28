@@ -1,0 +1,55 @@
+/*--
+/*  4.1 - Home Pages CSS
+/*----------------------------------------*/
+@import 'hero-slider';
+@import 'intro';
+@import 'cta';
+@import 'testimonial';
+@import 'partner';
+@import 'quote';
+@import 'funfact';
+@import 'feature';
+
+
+// Home Feature Wrapper
+.home-feature-wrap {
+	&.border-left {
+		border-color: #eeeeee;
+		@media #{$tablet-device, $large-mobile} {
+			border-left: none;
+		}
+	}
+	&.border-right {
+		border-color: #eeeeee;
+		@media #{$tablet-device, $large-mobile} {
+			border-right: none;
+			border-bottom: 1px solid #eeeeee;
+		}
+	}
+}
+
+// Home News Wrapper
+.home-news-wrap {
+	&.border-left {
+		border-color: #eeeeee;
+		@media #{$tablet-device, $large-mobile} {
+			border-left: none;
+		}
+	}
+	&.border-right {
+		border-color: #eeeeee;
+		@media #{$tablet-device, $large-mobile} {
+			border-right: none;
+			border-bottom: 1px solid #eeeeee;
+		}
+	}
+}
+
+// Home About Accordion 
+.about-accordion {
+	max-width: 560px;
+	@media #{$tablet-device, $large-mobile} {
+		max-width: 100%;
+		width: 100%;
+	}
+}

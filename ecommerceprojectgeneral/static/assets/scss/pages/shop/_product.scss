@@ -1,0 +1,165 @@
+/*	4.11.1 - Product CSS */
+.product-item {
+	& .inner {
+		& .media {
+			position: relative;
+			& .image {
+				display: block;
+				width: 100%;
+				overflow: hidden;
+				& img {
+					width: 100%;
+				}
+			}
+			& .labels {
+				position: absolute;
+				left: 20px;
+				top: 20px;
+				z-index: 7;
+				& .label {
+					position: relative;
+					display: block;
+					text-align: center;
+					color: $white;
+					font-size: 11px;
+					font-weight: 600;
+					text-transform: uppercase;
+					line-height: 20px;
+					padding: 0 8px;
+					min-width: 44px;
+					& + .label {
+						margin-top: 5px;
+					}
+					&.label-new {
+						background-color: $primary;
+					}
+					&.label-sale {
+						background-color: #6ac39b;
+					}
+					&.label-hot {
+						background-color: #d0021b;
+					}
+				}
+			}
+			& .wishlist {
+				position: absolute;
+				right: 20px;
+				top: 20px;
+				display: block;
+				line-height: 1;
+				padding: 2px;
+				& i {
+					font-size: 16px;
+					line-height: 1;
+					&.default {}
+					&.added {
+						position: absolute;
+						left: 0;
+						top: 0;
+						color: $primary;
+						opacity: 0;
+						visibility: hidden;
+					}
+				}
+				&.active {
+					& i {
+						&.default {
+							opacity: 0;
+							visibility: hidden;
+						}
+						&.added {
+							opacity: 1;
+							visibility: visible;
+						}
+					}
+				}
+			}
+
+		}
+		& .content {
+			text-align: center;
+			position: relative;
+			overflow: hidden;
+			&:not(:first-child) {
+				margin-top: 20px;
+			}
+			& .title {
+				line-height: 1.25;
+				color: $body-color;
+				margin-bottom: 5px;
+				z-index: 2;
+				& a {}
+			}
+			& .prices {
+				position: relative;
+				font-size: 13px;
+				line-height: 1.25;
+				font-weight: 600;
+				text-transform: uppercase;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: center;
+				top: 0;
+				transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+				z-index: 1;
+				visibility: visible;
+				& span {
+					color: $heading-color;
+					&.price-old {
+						color: #cccccc;
+					}
+					&.price-new {
+						&:not(:first-child) {
+							margin-left: 5px;
+						}
+					}
+				}
+			}
+			& .add-to-cart {
+				font-size: 13px;
+				line-height: 1.25;
+				font-weight: 600;
+				text-transform: uppercase;
+				color: $heading-color;
+				position: absolute;
+				left: 50%;
+				bottom: -30px;
+				transform: translateX(-50%);
+				white-space: nowrap;
+				opacity: 0;
+				visibility: hidden;
+				transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+				z-index: 3;
+				& i {
+					margin-right: 3px;
+					position: relative;
+					top: -1px;
+				}
+				&:hover {
+					color: $primary;
+				}
+			}
+		}
+		&:hover {
+			& .media {
+				& .image {
+					& img {
+						transform: scale(1.1);
+					}
+				}
+			}
+			& .content {
+				& .prices {
+					top: -20px;
+					opacity: 0;
+					visibility: hidden;
+				}
+				& .add-to-cart {
+					opacity: 1;
+					bottom: 0;
+					visibility: visible;
+				}
+			}
+		}
+	}
+}

@@ -1,0 +1,581 @@
+/*	4.1.1 - Hero Slider CSS	*/
+
+/*Hero Slider*/
+.hero-slider {
+	& .slick-arrow {
+		position: absolute;
+		top: 50%;
+		transform: translateY(-50%);
+		z-index: 9;
+		width: 30px;
+		height: 110px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: $white;
+		background-color: rgba($black, 0.5);
+		border: none;
+		& i {
+			font-size: 18px;
+		}
+		&.slick-prev {
+			left: 20px;
+		}
+		&.slick-next {
+			right: 20px;
+		}
+	}
+}
+
+/*Hero Slick Slider Animation Fix*/
+.slick-slide {
+	& .hero-content {
+		overflow: hidden;
+		& > * {
+			opacity: 0;
+			visibility: hidden;
+		}
+	}
+}
+.slick-current {
+	& .hero-content {
+		& > * {
+			opacity: 1;
+			visibility: visible;
+			transition: all .5s cubic-bezier(.645,.045,.355,1) 1s;
+		}
+	}
+}
+
+/*Hero Background Image Classes*/
+.hero-bg-1 {
+	 background-image: url("../images/hero-slider/slider-1.jpg")
+}
+.hero-bg-2 {
+	 background-image: url("../images/hero-slider/slider-2.jpg");
+}
+.hero-bg-3 {
+	 background-image: url("../images/hero-slider/slider-3.jpg");
+}
+.hero-bg-4 {
+	 background-image: url("../images/hero-slider/slider-4.jpg");
+}
+.hero-bg-5 {
+	 background-image: url("../images/hero-slider/slider-5.jpg");
+}
+
+/*Hero Item (For Home 1, 2 & 3)*/
+.hero-item {
+	height: 700px;
+	background-size: cover;
+	background-position: center center;
+	position: relative;
+	overflow: hidden;
+	display: block !important;
+	
+	// Responsive
+	@media #{$laptop-device} {
+		height: 550px;
+	}
+	@media #{$desktop-device, $tablet-device} {
+		height: 500px;
+	}
+	@media #{$large-mobile} {
+		height: 300px;
+	}
+	@media #{$small-mobile} {
+		height: 250px;
+	}
+}
+
+/*Hero Content One (For Home 1, 2 & 3)*/
+.hero-content-1 {
+	position: absolute;
+	left: 50%;
+	bottom: 0;
+	transform: translateX(-50%);
+	text-align: center;
+	padding: 50px 60px;
+	z-index: 1;
+	white-space: nowrap;
+	& .content-bg-overlay {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		background-color: rgba($heading-color, 0.9);
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+	& .sub-title {
+		font-size: 20px;
+		color: $primary;
+		text-transform: uppercase;
+	}
+	& .title {
+		font-size: 54px;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $white;
+	}
+	& .desc {
+		color: $body-light;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+	& .btn {}
+	
+	// Responsive
+	@media #{$desktop-device} {
+		padding: 40px 50px;
+		& .sub-title {
+			font-size: 16px;
+		}
+		& .title {
+			font-size: 40px;
+		}
+	}
+	@media #{$tablet-device} {
+		padding: 40px 50px;
+		& .sub-title {
+			font-size: 14px;
+		}
+		& .title {
+			font-size: 36px;
+		}
+		& .desc:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		& .btn {
+			height: 44px;
+			padding: 7px 30px;
+		}
+	}
+	@media #{$large-mobile} {
+		padding: 30px;
+		
+		& .sub-title {
+			font-size: 12px;
+			margin-bottom: 4px;
+		}
+		& .title {
+			font-size: 26px;
+			margin-bottom: 4px;
+		}
+		& .desc:not(:last-child) {
+			font-size: 12px;
+			margin-bottom: 15px;
+		}
+		& .btn {
+			font-size: 12px;
+			height: 40px;
+			padding: 5px 20px;
+		}
+	}
+	@media #{$small-mobile} {
+		& .sub-title {
+			font-size: 10px;
+			margin-bottom: 0;
+		}
+		& .title {
+			font-size: 20px;
+			margin-bottom: 0;
+		}
+		& .desc:not(:last-child) {
+			font-size: 10px;
+			margin-bottom: 10px;
+		}
+		& .btn {
+			font-size: 10px;
+			height: 36px;
+			padding: 3px 20px;
+		}
+	}
+	@media #{$extra-small-mobile} {
+		padding: 20px;
+	}
+}
+
+/*Hero Content Two (For Home 1, 2 & 3)*/
+.hero-content-2 {
+	position: absolute;
+	left: auto;
+	right: 16%;
+	bottom: auto;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: center;
+	padding: 50px 100px;
+	z-index: 1;
+	& .content-bg-overlay {
+		position: absolute;
+		left: 0;
+		bottom: 0;
+		background-color: rgba($heading-color, 0.9);
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+	& .title {
+		font-size: 60px;
+		line-height: 1;
+		font-weight: 400;
+		text-transform: uppercase;
+		color: $white;
+		margin-bottom: 15px;
+		& span {
+			color: $primary;
+			display: block;
+		}
+	}
+	& .desc {
+		color: $body-light;
+		&:not(:last-child) {
+			margin-bottom: 30px;
+		}
+	}
+	& .btn {}
+	
+	// Responsive
+	@media #{$desktop-device} {
+		padding: 40px 50px;
+		& .title {
+			font-size: 50px;
+		}
+	}
+	@media #{$tablet-device} {
+		padding: 40px 50px;
+		& .title {
+			font-size: 40px;
+		}
+		& .desc:not(:last-child) {
+			margin-bottom: 20px;
+		}
+		& .btn {
+			height: 44px;
+			padding: 7px 30px;
+		}
+	}
+	@media #{$large-mobile} {
+		padding: 30px;
+		left: 50%;
+		right: auto;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		white-space: nowrap;
+		& .title {
+			font-size: 30px;
+			margin-bottom: 4px;
+		}
+		& .desc:not(:last-child) {
+			font-size: 12px;
+			margin-bottom: 15px;
+		}
+		& .btn {
+			font-size: 12px;
+			height: 40px;
+			padding: 5px 20px;
+		}
+	}
+	@media #{$small-mobile} {
+		& .title {
+			font-size: 24px;
+			margin-bottom: 4px;
+		}
+		& .desc:not(:last-child) {
+			font-size: 10px;
+			margin-bottom: 10px;
+		}
+		& .btn {
+			font-size: 10px;
+			height: 36px;
+			padding: 3px 20px;
+		}
+	}
+}
+
+/*Hero Content Three (For Home 1, 2 & 3)*/
+.hero-content-3 {
+	position: absolute;
+	left: auto;
+	right: 20%;
+	bottom: auto;
+	top: 50%;
+	transform: translateY(-30%);
+	text-align: center;
+	padding: 0;
+	z-index: 1;
+	& .title {
+		font-size: 80px;
+		line-height: 1;
+		font-weight: 400;
+		text-transform: capitalize;
+		color: $white;
+		margin-bottom: 25px;
+		& span {
+			color: $primary;
+		}
+	}
+	& .btn {}
+	
+	// Responsive
+	@media #{$desktop-device} {
+		& .title {
+			font-size: 65px;
+		}
+	}
+	@media #{$tablet-device} {
+		& .title {
+			font-size: 50px;
+		}
+		& .btn {
+			height: 44px;
+			padding: 7px 30px;
+		}
+	}
+	@media #{$large-mobile} {
+		left: 50%;
+		right: auto;
+		top: 50%;
+		transform: translateX(-50%) translateY(-50%);
+		white-space: nowrap;
+		& .title {
+			font-size: 40px;
+		}
+		& .btn {
+			font-size: 12px;
+			height: 40px;
+			padding: 5px 20px;
+		}
+	}
+	@media #{$small-mobile} {
+		& .title {
+			font-size: 30px;
+			margin-bottom: 15px;
+		}
+		& .btn {
+			font-size: 10px;
+			height: 36px;
+			padding: 3px 20px;
+		}
+	}
+}
+
+/*Hero Item Two (For Home 4)*/
+.hero-item-2 {
+	height: 750px;
+	
+	// Responsive
+	@media #{$laptop-device} {
+		height: 550px;
+	}
+	@media #{$desktop-device, $tablet-device} {
+		height: 500px;
+	}
+	@media #{$large-mobile} {
+		height: 300px;
+	}
+	@media #{$small-mobile} {
+		height: 250px;
+	}
+}
+
+/*Hero Content Four (For Home 4)*/
+.hero-content-4 {
+	position: absolute;
+	left: 60px;
+	right: auto;
+	bottom: auto;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: left;
+	padding: 0;
+	z-index: 1;
+	& .sub-title {
+		display: block;
+		font-size: 18px;
+		line-height: 1;
+		text-transform: uppercase;
+		color: $primary;
+		margin-bottom: 25px;
+	}
+	& .title {
+		font-size: 80px;
+		line-height: 1;
+		font-weight: 400;
+		color: $white;
+		margin-bottom: 45px;
+	}
+	& .btn {}
+	
+	// Responsive
+	@media #{$desktop-device} {
+		& .title {
+			font-size: 65px;
+		}
+	}
+	@media #{$tablet-device} {
+		& .title {
+			font-size: 50px;
+		}
+		& .btn {
+			height: 44px;
+			padding: 7px 30px;
+		}
+	}
+	@media #{$large-mobile} {
+		left: 30px;
+		white-space: nowrap;
+		& .sub-title {
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+		& .title {
+			font-size: 40px;
+			margin-bottom: 25px;
+		}
+		& .btn {
+			font-size: 12px;
+			height: 40px;
+			padding: 5px 20px;
+		}
+	}
+	@media #{$small-mobile} {
+		& .sub-title {
+			font-size: 13px;
+		}
+		& .title {
+			font-size: 30px;
+			margin-bottom: 20px;
+		}
+		& .btn {
+			font-size: 10px;
+			height: 36px;
+			padding: 3px 20px;
+		}
+	}
+}
+
+/*Hero Item Three (For Home 5)*/
+.hero-item-3 {
+	height: 750px;
+	
+	// Responsive
+	@media #{$laptop-device} {
+		height: 550px;
+	}
+	@media #{$desktop-device} {
+		height: 500px;
+	}
+	@media #{$tablet-device} {
+		height: 400px;
+	}
+	@media #{$large-mobile} {
+		height: 300px;
+	}
+	@media #{$small-mobile} {
+		height: 200px;
+	}
+}
+
+/*Hero Content Five (For Home 5)*/
+.hero-content-5 {
+	position: absolute;
+	left: 60px;
+	right: auto;
+	bottom: auto;
+	top: 50%;
+	transform: translateY(-50%);
+	text-align: left;
+	padding: 0;
+	z-index: 1;
+	& .sub-title {
+		display: block;
+		font-size: 18px;
+		line-height: 1;
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $white;
+		margin-bottom: 45px;
+	}
+	& .title {
+		font-size: 80px;
+		line-height: 1;
+		font-weight: 400;
+		color: $primary;
+		text-transform: uppercase;
+		margin-bottom: 55px;
+	}
+	& .btn {}
+	
+	// Responsive
+	@media #{$desktop-device} {
+		& .sub-title {
+			margin-bottom: 25px;
+		}
+		& .title {
+			font-size: 65px;
+			margin-bottom: 35px;
+		}
+	}
+	@media #{$tablet-device} {
+		& .sub-title {
+			margin-bottom: 25px;
+		}
+		& .title {
+			font-size: 50px;
+			margin-bottom: 35px;
+		}
+		& .btn {
+			height: 44px;
+			padding: 7px 30px;
+		}
+	}
+	@media #{$large-mobile} {
+		left: 30px;
+		white-space: nowrap;
+		& .sub-title {
+			font-size: 16px;
+			margin-bottom: 15px;
+		}
+		& .title {
+			font-size: 40px;
+			margin-bottom: 25px;
+		}
+		& .btn {
+			font-size: 12px;
+			height: 40px;
+			padding: 5px 20px;
+		}
+	}
+	@media #{$small-mobile} {
+		& .sub-title {
+			font-size: 13px;
+		}
+		& .title {
+			font-size: 30px;
+			margin-bottom: 20px;
+		}
+		& .btn {
+			font-size: 10px;
+			height: 36px;
+			padding: 3px 20px;
+		}
+	}
+	@media #{$extra-small-mobile} {
+		& .sub-title {
+			font-size: 11px;
+			margin-bottom: 10px;
+		}
+		& .title {
+			font-size: 24px;
+			margin-bottom: 15px;
+		}
+		& .btn {
+			font-size: 10px;
+			height: 36px;
+			padding: 3px 20px;
+		}
+	}
+}

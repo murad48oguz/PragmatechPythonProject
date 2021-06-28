@@ -1,0 +1,81 @@
+/*--
+/*  3.2 - Header Middle CSS
+/*----------------------------------------*/
+.header-middle {}
+
+// Header Middle Left
+.header-middle-left {
+    min-width: 300px;
+    border-right: 1px solid #eeeeee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    
+}
+// Header Middle Social
+.header-middle-social {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -2px;
+    & a {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: rgba($heading-color, 0.15);
+        text-align: center;
+        margin: 0 2px;
+        transition: $transition-default;;
+        & i {
+            line-height: 30px;
+        }
+        &:hover {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+}
+
+// Header Middle Center
+.header-middle-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-logo {
+    & a {
+        display: block;
+        & img {}
+    }
+}
+
+// Header Middle Right
+.header-middle-right {
+    min-width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+    background-image: url(../images/bg/header-middle-right.png);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.header-middle-free-case {
+    & a {
+        color: $white;
+        display: flex;
+        line-height: 32px;
+        padding-top: 2px;
+        transition: $transition-default;;
+        & i {
+            color: $primary;
+            font-size: 32px;
+            margin-right: 18px;
+            margin-top: -2px;
+        }
+        &:hover {
+            color: $primary;
+        }
+    }
+}

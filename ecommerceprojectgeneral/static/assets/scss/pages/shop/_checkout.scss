@@ -1,0 +1,49 @@
+/*	4.11.4 - Checkout CSS */
+
+/*-- Shipping Form --*/
+#shipping-form {
+    display: none;
+}
+
+// Checkout Cart Tatal Table
+.checkout-cart-totle-table {
+	margin: 0;
+	& thead, tfoot {
+		& tr {
+			& th {
+				font-size: 18px;
+				line-height: 1;
+				color: $primary;
+				font-family: $heading-font;
+			}
+		}
+	}
+	& tbody {
+		& tr {
+			& td {}
+			&:nth-last-child(1) {
+				& td {
+					border-bottom: 1px solid #ececec;
+				}
+			}
+			&:nth-last-child(1), &:nth-last-child(2) {
+				& td {
+					font-weight: 600;
+					border-top: 1px solid #ececec;
+				}
+			}
+		}
+	}
+	& thead, tbody, tfoot {
+		& tr {
+			& th, td {
+				&:first-child {
+					padding-left: 0;
+				}
+				&:last-child {
+					padding-right: 0;
+				}
+			}
+		}
+	}
+}

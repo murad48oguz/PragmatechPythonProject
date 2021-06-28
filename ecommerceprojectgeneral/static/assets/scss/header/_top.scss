@@ -1,0 +1,73 @@
+/*--
+/*  3.1 - Header Top CSS
+/*----------------------------------------*/
+.header-top {
+    padding: 15px 0;
+    background-color: $heading-color;
+}
+
+// Header Top Left
+.header-top-left {}
+.header-top-left-info {
+    display: flex;
+    flex-wrap: wrap;
+    & p {
+        color: $white;
+        font-size: 13px;
+        line-height: 20px;
+        margin-bottom: 0;
+        margin-right: 15px;
+        &:last-child {
+            margin-right: 0;
+        }
+        & i {
+            color: $primary;
+            margin-right: 8px;
+        }
+    }
+}
+
+// Header Top Right
+.header-top-right {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.header-top-right-text, .header-top-right-cart {
+    color: lighten($body-light, 25);
+    font-size: 13px;
+    line-height: 20px;
+    margin-bottom: 0;
+    margin-right: 20px;
+    &:last-child {
+        margin-right: 0;
+    }
+}
+.header-top-right-cart {
+    color: $white;
+    transition: $transition-default;;
+    &:focus {
+        color: $primary;
+    }
+    & i {
+        font-size: 16px;
+        line-height: 1;
+        margin-right: 12px;
+        position: relative;
+        &::after {
+            content: attr(data-count);
+            position: absolute;
+            left: 12px;
+            top: -4px;
+            width: 16px;
+            height: 16px;
+            font-size: 10px;
+            line-height: 16px;
+            border-radius: 50%;
+            background-color: $primary;
+            color: $white;
+            text-align: center;
+            font-style: normal;
+        }
+    }
+}

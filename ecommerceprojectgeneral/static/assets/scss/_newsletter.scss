@@ -1,0 +1,75 @@
+/*----------------------------------------*/
+/*  06. Newsletter Socail CSS
+/*----------------------------------------*/
+
+// Newsletter Socail Section
+.newsletter-socail-section {
+    padding: 50px 0;
+}
+
+// Newsletter Form
+.newsletter-form {
+    & form {
+		display: flex;
+		flex-wrap: wrap;
+        & input[type="email"] {
+            background-color: $white !important;
+            padding: 10px 20px !important;
+			width: auto !important;
+			margin-right: 5px;
+        }
+        & input[type="submit"] {
+            border: none;
+            padding: 10px 20px;
+			height: auto;
+        }
+    }
+    // Responsive
+    @media #{$small-mobile} {
+        & form {
+            & input[type="email"] {
+                width: 280px !important;
+            }
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & form {
+            & input {
+                width: 100%;
+                text-align: center;
+				margin-right: 0 !important;
+				max-width: none;
+                &[type="submit"] {
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+}
+.mailchimp-alerts {
+	max-width: 500px;
+}
+
+// Footer Top Social
+.footer-top-socail {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -2px;
+    & a {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        color: $white;
+        background-color: rgba($black, 0.3);
+        text-align: center;
+        margin: 0 2px;
+        transition: $transition-default;;
+        & i {
+            font-size: 16px;
+            line-height: 40px;
+        }
+        &:hover {
+            background-color: $primary;
+        }
+    }
+}

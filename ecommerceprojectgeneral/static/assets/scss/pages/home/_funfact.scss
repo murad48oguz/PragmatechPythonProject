@@ -1,0 +1,47 @@
+/*	4.1.7 - Funfact CSS	*/
+.funfact {
+	& .icon {
+		width: 88px;
+		height: 88px;
+		border: 1px solid $primary;
+		color: $primary;
+		display: flex;
+		margin: 0 auto;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 20px;
+		& i {
+			font-size: 30px;
+		}
+	}
+	& .number {
+		display: block;
+		font-size: 40px;
+		font-weight: 600;
+		line-height: 1;
+		color: $heading-color;
+		margin-bottom: 15px;
+	}
+	& .title {
+		color: $body-color;
+		font-size: 13px;
+		line-height: 1;
+		text-transform: uppercase;
+		font-weight: 400;
+	}
+	
+	// Responsive
+	@media #{$tablet-device, $large-mobile} {
+		& .number {
+			font-size: 30px;
+		}
+	}
+	@media #{$small-mobile} {
+		& .number {
+			font-size: 24px;
+		}
+		& .title {
+			font-size: 12px;
+		}
+	}
+}

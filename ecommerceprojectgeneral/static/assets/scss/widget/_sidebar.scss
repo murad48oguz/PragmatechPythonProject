@@ -1,0 +1,384 @@
+/*--
+/*  5.1 - Sidebar Widget CSS
+/*----------------------------------------*/
+
+// Sidebar Wrapper
+.sidebar-wrap {
+    border-left: 1px solid #eeeeee;
+    height: 100%;
+    @media #{$tablet-device, $large-mobile} {
+        border-left: none;
+        height: auto;
+        padding-top: 0;
+    }
+}
+
+// Widget
+.widget {
+    margin-bottom: 40px;
+    color: $body-color;
+    &:last-child {
+        margin-bottom: 0;
+    }
+	& .widget-title {
+		border-bottom: 1px solid #eeeeee;
+		padding-left: 20px;
+		padding-bottom: 20px;
+		@media #{$tablet-device, $large-mobile} {
+			padding-left: 0;
+		}
+	}
+}
+
+// Widget Title
+.widget-title {
+    font-size: 20px;
+    line-height: 1.2;
+    margin: 0;
+    text-transform: uppercase;
+    &::after {
+        content: '\e901';
+        font-family: $TMLawyer;
+        font-size: 9px;
+        display: block;
+        margin-top: 4px;
+        color: $primary;
+    }
+}
+
+// Widget Link
+.widget-link {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & li {
+        border-bottom: 1px solid #eeeeee;
+        & a {
+            padding: 15px 0 15px 20px;
+            line-height: 1.5;
+        }
+        &.active {
+            & a {
+                font-weight: 600;
+            }
+        }
+    }
+    &.widget-category {
+        & li {
+            & a {
+                &::before {
+                    content: "\f105";
+                    font-family: $fontawesome;
+                    color: $primary;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+    @media #{$tablet-device, $large-mobile} {
+        & li {
+            & a {
+                padding-left: 0;
+            }
+        }
+    }
+}
+
+// Widget Brochures
+.widget-brochure {
+    padding-left: 20px;
+    padding-top: 20px;
+    & a {
+        display: block;
+        background-color: lighten($primary, 36);
+        padding: 15px 20px;
+        line-height: 20px;
+        & + a {
+            margin-top: 10px;
+        }
+        & i {
+            width: 20px;
+            margin-right: 5px;
+            color: $primary;
+        }
+    }
+    @media #{$tablet-device, $large-mobile} {
+        padding-left: 0;
+    }
+}
+
+// Widget Banner
+.widget-banner {
+    padding-left: 20px;
+    padding-top: 20px;
+    & a {
+        display: block;
+        & img {
+            max-width: 100%;
+        }
+    }
+    @media #{$tablet-device, $large-mobile} {
+        padding-left: 0;
+    }
+}
+
+// Widget Search
+.widget-search {
+    padding-left: 20px;
+    & form {
+        & input[type="search"] {
+            margin-bottom: 0;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: $white;
+            width: 100%;
+            color: $body-light;
+            @include placeholder {
+                color: $body-light;
+            }
+        }
+    }
+    @media #{$tablet-device, $large-mobile} {
+        padding-left: 0;
+    }
+}
+
+// Widget Post List Style
+.widget-post-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & li {
+        border-bottom: 1px solid #eeeeee;
+        padding: 15px 0 15px 20px;
+        & .title {
+            line-height: 1.5;
+        }
+        & .post-date {
+            color: $body-light;
+            display: block;
+            font-size: 95%;
+        }
+    }
+    @media #{$tablet-device, $large-mobile} {
+        & li {
+            padding-left: 0;
+        }
+    }
+}
+
+// Widget Post With Thumbnail
+.widget-post {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & li {
+        display: block;
+        overflow: hidden;
+        padding-left: 20px;
+        padding-top: 20px;
+        & .thumb {
+            float: left;
+            margin-right: 15px;
+            width: 80px;
+            height: 80px;
+            background: #eeeeee;
+            & img {
+                max-width: 100%;
+            }
+        }
+        & .content {
+            overflow: hidden;
+            & .title {
+                font-size: 20px;
+                color: $heading-color;
+                font-family: $heading-font;
+                line-height: 1.1;
+                margin-bottom: 10px;
+                &:hover {
+                    color: $primary;
+                } 
+            }
+            & .meta {
+                display: flex;
+                flex-wrap: wrap;
+                & span {
+                    display: flex;
+                    align-items: center;
+                    font-size: 12px;
+                    margin-right: 15px;
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                    & i {
+                        color: $primary;
+                        margin-right: 5px;
+                    }
+                }
+            }
+        }
+    }
+    @media #{$tablet-device, $large-mobile} {
+        & li {
+            padding-left: 0;
+        }
+    }
+}
+
+// Widget Product
+.widget-product {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & li {
+        display: block;
+        overflow: hidden;
+        padding-left: 20px;
+        padding-top: 20px;
+        & .thumb {
+            float: left;
+            margin-right: 15px;
+            width: 80px;
+            height: 80px;
+            background: #eeeeee;
+            & img {
+                max-width: 100%;
+            }
+        }
+        & .content {
+            overflow: hidden;
+            & .title {
+                font-size: 18px;
+                color: $heading-color;
+                font-family: $heading-font;
+                line-height: 1.1;
+                margin-bottom: 10px;
+                &:hover {
+                    color: $primary;
+                } 
+            }
+			& .prices {
+				position: relative;
+				font-size: 13px;
+				line-height: 1.25;
+				font-weight: 600;
+				text-transform: uppercase;
+				display: flex;
+				flex-wrap: wrap;
+				& span {
+					color: $heading-color;
+					&.price-old {
+						color: #cccccc;
+					}
+					&.price-new {
+						&:not(:first-child) {
+							margin-left: 5px;
+						}
+					}
+				}
+			}
+        }
+    }
+    @media #{$tablet-device, $large-mobile} {
+        & li {
+            padding-left: 0;
+        }
+    }
+}
+
+// Widget Comment
+.widget-comment {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    & li {
+        border-bottom: 1px solid #eeeeee;
+        padding: 15px 0 15px 20px;
+        & a {
+            line-height: 1.5;
+        }
+        & span {}
+    }
+    @media #{$tablet-device, $large-mobile} {
+        & li {
+            padding-left: 0;
+        }
+    }
+}
+
+// Widget Price Range
+.widget-price-range {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-top: 20px;
+    
+	& .irs--round {
+		width: 100%;
+		& .irs {
+			& .irs-line {
+				height: 6px;
+				border-radius: 0;
+				background-color: #f7f7f7;
+			}
+			& .irs-from, & .irs-to {
+				font-size: 12px;
+				padding: 5px;
+				background-color: $primary;
+				&::before {
+					border-top-color: $primary;
+				}
+			}
+		}
+		& .irs-bar {
+			height: 6px;
+			background-color: $primary;
+		}
+		& .irs-handle {
+			background-color: $primary;
+			border: none;
+			width: 20px;
+			height: 20px;
+			top: 28px;
+			&.from {}
+			&.to {}
+		}
+	}
+	
+    @media #{$tablet-device, $large-mobile} {
+        padding-left: 0;
+    }
+}
+
+// Widget Tags
+.widget-tags {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    padding-top: 10px;
+    & a {
+        font-size: 14px;
+        text-transform: uppercase;
+        background-color: lighten($primary, 36);
+        padding: 8px 15px;
+        display: inline-block;
+        margin: 10px 10px 0 0;
+        border: none;
+        &:hover {
+            background-color: $primary;
+            color: $white;
+        }
+    }
+    @media #{$tablet-device, $large-mobile} {
+        padding-left: 0;
+    }
+}
+
+// Widget Text
+.widget-text {
+    padding-left: 20px;
+    padding-top: 10px;
+    @media #{$tablet-device, $large-mobile} {
+        padding-left: 0;
+    }
+}

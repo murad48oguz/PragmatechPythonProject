@@ -1,0 +1,42 @@
+/*--
+/*  4.8 - About CSS
+/*----------------------------------------*/
+
+// About Image
+.about-us-image {
+	& img {
+		width: 100%;
+	}
+}
+
+// History Wrapper
+.our-history-wrap {
+	display: flex;
+	flex-direction: column;
+}
+// Our History
+.our-history {
+	display: block;
+	text-align: center;
+	padding: 30px;
+	background-color: lighten($primary, 37);
+	& + .our-history {
+		margin-top: 1px;
+	}
+	& .date {
+		font-size: 14px;
+		text-transform: uppercase;
+		color: $primary;
+		font-weight: 600;
+		& i {
+			top: -1px;
+			position: relative;
+		}
+	}
+	& .title {
+		margin-bottom: 0;
+		font-size: 20px;
+		font-weight: 500;
+		line-height: 1.25;
+	}
+}

@@ -1,0 +1,59 @@
+/*--
+/*  3.4 - Mobile Header CSS
+/*----------------------------------------*/
+.mobile-header {
+    padding: 20px 0;
+}
+
+// Mobile Header Cart
+.mobile-header-cart {
+    @extend .header-top-right-cart;
+    color: $body-color;
+    padding-right: 10px;
+    & i {
+        margin: 0;
+        font-size: 22px;
+    }
+    &:last-child {
+        margin-right: 0;
+    }
+    @media #{$extra-small-mobile} {
+        margin-right: 10px;
+    }
+}
+// Mobile Header Rigth Toggle (Search & Offcanvas)
+.mobile-header-right-toggles {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    & button {
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin-right: 25px;
+        &:last-child {
+            margin-right: 0;
+        }
+        & i {
+            display: flex;
+            font-size: 18px;
+            line-height: 36px;
+        }
+        &.mobile-menu-toggle {
+            & i {
+                font-size: 36px;
+            }
+        }
+        &:hover {
+            color: $primary;
+        }
+    }
+    @media #{$extra-small-mobile} {
+        & button {
+            margin-right: 15px;
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}

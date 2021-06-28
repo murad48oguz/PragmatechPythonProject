@@ -1,0 +1,204 @@
+/*--
+/*  3.5 - Offcanvas CSS
+/*----------------------------------------*/
+.offcanvas-section {
+    position: fixed;
+    right: -100%;
+    left: auto;
+    top: 0;
+    height: 100%;
+    width: 390px;
+	padding-left: 60px;
+	opacity: 0;
+	visibility: hidden;
+	transition: $transition-default;
+	z-index: 998;
+	&.open {
+		right: 0;
+		opacity: 1;
+		visibility: visible;
+		& .offcanvas-close {
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+	// Responsive
+	@media #{$extra-small-mobile} {
+		width: 100%;
+		padding-left: 50px;
+	}
+}
+
+/*OffCanvas Overlay*/
+.offcanvas-overlay {
+	display: none;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba($black, 0.8);
+	z-index: 996;
+}
+
+/*OffCanvas Wraper*/
+.offcanvas-wrap {
+    height: 100%;
+    background-color: $white;
+    box-shadow: -5px 0 5px 0 rgba($black, 0.1);
+    overflow-y: auto;
+    overflow-x: hidden;
+    & .inner {
+        display: flex;
+        flex-direction: column;
+        padding: 40px 30px;
+        min-height: 100%;
+    }
+}
+
+/*OffCanvas Close*/
+.offcanvas-close {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	width: 50px;
+	height: 50px;
+	border: none;
+	background-color: $white;
+	color: $heading-color;
+	box-shadow: -5px 0 5px 0 rgba($black, 0.1);
+	font-size: 24px;
+	font-weight: 300;
+	z-index: 997;
+	transition: $transition-default;
+	opacity: 0;
+	visibility: hidden;
+	// Responsive
+	@media #{$extra-small-mobile} {
+		width: 40px;
+		height: 40px;
+	}
+}
+
+/*OffCanvas Menu*/
+.offcanvas-menu {
+    margin-bottom: 50px;
+    & nav {  
+        & ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            & li {
+				position: relative;
+                & a {
+                    font-weight: 500;
+                    text-transform: uppercase;
+                    display: block;
+                    padding: 15px 0;
+                    border-bottom: 1px solid #eeeeee;
+                    line-height: 1;
+                }
+                &:last-child {
+                    & > a {
+                        border-bottom: none;
+                    }
+                }
+				
+				// Menu Expand Toggle Button For Submenu
+				& .menu-expand {
+					position: absolute;
+					right: 0;
+					top: 0;
+					width: 30px;
+					height: 44px;
+					line-height: 44px;
+					cursor: pointer;
+					text-align: center;
+					z-index: 5;
+					& i {
+						display: block;
+						margin-top: 22px;
+						margin-left: auto;
+						margin-right: auto;
+						border-bottom: 1px solid;
+						position: relative;
+						width: 10px;
+						transition: all 250ms ease-out;
+						&::before {
+							width: 100%;
+							content: "";
+							border-bottom: 1px solid;
+							display: block;
+							position: absolute;
+							top: 0;
+							transform: rotate(90deg);
+							transition: all 250ms ease-out;
+						}
+					}
+					&:hover {
+						& i {
+							border-color: $primary;
+							&::before {
+								border-color: $primary;
+							}
+						}
+					}
+				}
+				&:hover {
+					& > .menu-expand {
+						& i {
+							border-color: $primary;
+							&::before {
+								border-color: $primary;
+							}
+						}
+					}
+				}
+				&.active {
+					& > .menu-expand {
+						& i {
+							&::before {
+								transform: rotate(0deg);
+							}
+						}
+					}
+					& > .sub-menu {
+						border-bottom: 1px solid #eeeeee;
+					}
+				}
+            }
+        }
+    }
+    & .sub-menu {
+        display: none;
+        & li {
+            padding: 0 15px;
+            & a {
+                font-size: 13px;
+                text-transform: inherit;
+            }
+        }
+    }
+}
+
+/*OffCanvas Info*/
+.offcanvas-info {
+    margin-bottom: 30px;
+    & p {
+        line-height: 20px;
+        margin-bottom: 5px;
+        &:last-child {
+            margin-bottom: 0;
+        }
+        & i {
+            color: $primary;
+            margin-right: 8px;
+            width: 16px;
+        }
+    }
+}
+
+/*OffCanvas Socail*/
+.offcanvas-social {
+    @extend .header-middle-social;
+}

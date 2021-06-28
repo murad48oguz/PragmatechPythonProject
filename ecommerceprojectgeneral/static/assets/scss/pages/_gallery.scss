@@ -1,0 +1,43 @@
+/*--
+/*  4.12 - Gallery CSS
+/*----------------------------------------*/
+.gallery-item {
+	position: relative;
+	overflow: hidden;
+	display: block;
+	& img {
+		display: block;
+		width: 100%;
+	}
+	& .icon {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		width: 50px;
+		height: 50px;
+		text-align: center;
+		padding: 10px;
+		color: $heading-color;
+		background: $primary;
+		z-index: 9;
+		transform: translate(50%) rotateZ(90deg);
+		opacity: 0;
+		visibility: hidden;
+		transition: $transition-default;
+		& i {
+			font-size: 18px;
+			line-height: 30px;
+		}
+		&:hover {
+			background: $heading-color;
+			color: $primary;
+		}
+	}
+	&:hover {
+		& .icon {
+			transform: translate(0) rotateZ(0deg);
+			opacity: 1;
+			visibility: visible;
+		}
+	}
+}

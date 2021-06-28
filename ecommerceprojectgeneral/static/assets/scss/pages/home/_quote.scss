@@ -1,0 +1,176 @@
+/*	4.1.6 - Quote CSS */
+
+// Quote Image
+.quote-image {
+	height: 100%;
+	& img {
+		height: 100%;
+		object-fit: cover;
+		object-position: center;
+	}
+}
+// Quote Content
+.quote-content {
+	padding-left: 30px;
+	padding-right: 30px;
+	& h2 {
+		line-height: 1.25;
+		color: $light;
+		margin-bottom: 25px;
+	}
+	& p {}
+}
+
+// Attorney Quote
+.attorney-quote {
+	& p {
+		font-size: 34px;
+		line-height: 1.4;
+		font-family: $heading-font;
+		margin-bottom: 30px;
+	}
+	& .signature {
+		margin-bottom: 30px;
+	}
+	& .name {
+		display: block;
+		font-size: 24px;
+		line-height: 1;
+		font-weight: 700;
+		color: $heading-color;
+		margin-bottom: 10px;
+	}
+	& .title {
+		display: block;
+		font-size: 15px;
+		line-height: 1;
+		color: $body-light;
+	}
+	// Responsive
+	@media #{$large-mobile} {
+		& p {
+			font-size: 28px;
+			margin-bottom: 20px;
+		}
+		& .signature {
+			margin-bottom: 20px;
+		}
+		& .name {
+			font-size: 20px;
+		}
+	}
+	@media #{$small-mobile} {
+		& p {
+			font-size: 24px;
+		}
+	}
+	@media #{$extra-small-mobile} {
+		& p {
+			font-size: 20px;
+			margin-bottom: 15px;
+		}
+		& .signature {
+			margin-bottom: 15px;
+		}
+		& .name {
+			font-size: 18px;
+		}
+		& .title {
+			font-size: 13px;
+		}
+	}
+}
+
+// Attorney Quote Two Wrapper
+.attorney-quote-2-wrap {
+	padding-top: 60px;
+	padding-bottom: 60px;
+	background-image: url(../images/bg/quote-bg-1.jpg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	margin-top: 60px;
+	// Responsive
+	@media #{$tablet-device, $large-mobile} {
+		margin-top: 0;
+		padding-top: 0;
+	}
+}
+// Attorney Quote Media
+.attorney-quote-media {
+	position: relative;
+	margin-top: -120px;
+	& img {}
+	& .video-popup {
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		transform: translate(-50%, -50%);
+		color: $white;
+		width: 68px;
+		height: 68px;
+		border-radius: 50%;
+		background-color: $primary;
+		text-align: center;
+		z-index: 98;
+		&::before {
+			content: '';
+			width: 100%;
+			height: 100%;
+			border-radius: 50%;
+			background-color: $primary;
+			opacity: .3;
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%) scale(1.22);
+			z-index: 97;
+		}
+		& i {
+			font-size: 24px;
+			line-height: 68px;
+		}
+	}
+	// Responsive
+	@media #{$tablet-device, $large-mobile} {
+		margin-top: 0;
+	}
+}
+// Attorney Quote Two
+.attorney-quote-2 {
+	padding-right: 15px;
+	& .title {
+		display: block;
+		line-height: 1;
+		font-size: 24px;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $heading-color;
+		margin-bottom: 15px;
+	}
+	& p {
+		font-size: 24px;
+		line-height: 1.4;
+		font-family: $heading-font;
+		margin-bottom: 20px;
+	}
+	& .signature {}
+	// Responsive
+	@media #{$large-mobile} {
+		& p {
+			font-size: 28px;
+			margin-bottom: 20px;
+		}
+	}
+	@media #{$small-mobile} {
+		& p {
+			font-size: 24px;
+		}
+	}
+	@media #{$extra-small-mobile} {
+		& p {
+			font-size: 20px;
+			margin-bottom: 15px;
+		}
+	}
+}

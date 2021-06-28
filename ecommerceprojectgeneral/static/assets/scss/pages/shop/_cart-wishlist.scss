@@ -1,0 +1,198 @@
+/*	4.11.3 - Cart & Wishlist CSS */
+
+// Cart & Wishlist Table
+.cart-wishlist-table {
+	white-space: nowrap;
+	& thead {
+		background-color: #f7f8f8;
+		& tr {
+			& th {
+				font-size: 14px;
+				&:first-child {
+					padding-left: 20px;
+				}
+				&:last-child {
+					padding-right: 20px;
+				}
+				&.product-remove {}
+				&.product-thumbnail {}
+				&.product-name {}
+				&.product-price {}
+				&.product-quantity {}
+				&.product-subtotal {}
+				&.product-addtocart {}
+			}
+		}
+	}
+	& tbody {
+		& tr {
+			& td {
+				vertical-align: middle;
+				font-weight: 600;
+				font-size: 14px;
+				color: $body-light;
+				border-bottom: 1px solid #f1f2f3;
+				&:first-child {
+					padding-left: 20px;
+				}
+				&:last-child {
+					padding-right: 20px;
+				}
+				&.product-remove {
+					& .remove {
+						width: 16px;
+						height: 16px;
+						border: none;
+						background-color: transparent;
+						line-height: 1;
+						padding: 0;
+						& i {
+							display: block;
+							font-size: 16px;
+							line-height: 1;
+						}
+						&:hover {
+							color: $primary;
+						}
+					}
+				}
+				&.product-thumbnail {
+					& a {
+						display: inline-block;
+						min-width: 70px;
+						& img {}
+					}
+				}
+				&.product-name {
+					& a {
+						color: $heading-color;
+						&:hover {
+							color: $primary;
+						}
+					}
+				}
+				&.product-price {
+					& span {}
+				}
+				&.product-quantity {
+					& .quantity {
+						display: block;
+						width: 90px;
+						& input {
+							padding-right: 10px !important;
+						}
+					}
+				}
+				&.product-subtotal {
+					& span {}
+				}
+				&.product-addtocart {
+					& .btn {
+						font-size: 12px;
+						height: 40px;
+						padding: 5px 20px;
+						&:hover {
+							background-color: $primary;
+							border-color: $primary;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// Coupon Form
+.coupon-form {
+	& form {
+		& input[type="text"] {
+			max-width: 200px !important;
+		}
+		& input[type="submit"] {
+			&:hover {
+				background-color: $primary;
+				border-color: $primary;
+			}
+		}
+	}
+	// Responsive
+	@media #{$tablet-device} {
+		& form {
+			& input {
+				padding-top: 7px !important;
+				padding-bottom: 7px !important;
+				&[type="submit"] {
+					height: 44px;
+				}
+			}
+		}
+	}
+	@media #{$large-mobile} {
+		& form {
+			& input {
+				padding-top: 5px !important;
+				padding-bottom: 5px !important;
+				&[type="text"] {
+					max-width: 170px !important;
+				}
+				&[type="submit"] {
+					height: 40px;
+					padding-left: 20px;
+					padding-right: 20px;
+				}
+			}
+		}
+	}
+	@media #{$extra-small-mobile} {
+		& form {
+			& [class*="col-"] {
+				width: 100%;
+				flex: 1 0 auto;
+				& input {
+					width: 100% !important;
+					max-width: none !important;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
+
+// Update Cart Button
+.update-cart-btn {
+	&:hover {
+		background-color: $primary;
+		border-color: $primary;
+	}
+}
+
+// Cart Totals
+.cart-totals {
+	margin-left: auto;
+	max-width: 400px;
+	width: 100%;
+	& .title {
+		display: block;
+		line-height: 1;
+		color: $heading-color;
+		font-weight: 600;
+		margin-bottom: 15px;
+	}
+	& .table {
+		& tbody {
+			& tr {
+				& th, & td {
+					font-size: 14px;
+					line-height: 1;
+				}
+			}
+		}
+	}
+	& .btn {
+		display: block;
+		&:hover {
+			background-color: $primary;
+			border-color: $primary;
+		}
+	}
+}

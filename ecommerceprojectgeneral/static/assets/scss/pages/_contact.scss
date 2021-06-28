@@ -1,0 +1,66 @@
+/*--
+/*  4.13 - Contact CSS
+/*----------------------------------------*/
+
+// Contact Map
+.contact-map {
+	width: 100%;
+	min-height: 480px;
+	height: 100%;
+	// Responsive
+	@media #{$large-mobile} {
+		min-height: 330px;
+	}
+}
+
+// Contact Information
+.contact-info {
+	text-align: center;
+	& .icon {
+		width: 88px;
+		height: 88px;
+		border: 1px solid $primary;
+		color: $primary;
+		display: flex;
+		margin: 0 auto;
+		align-items: center;
+		justify-content: center;
+		margin-bottom: 20px;
+		& i {
+			font-size: 30px;
+		}
+	}
+	& .content {
+		& .title {
+			font-weight: 500;
+		}
+		& p {}
+	}
+}
+
+// Contact Information Two (List Style)
+.contact-info-list {
+	list-style: none;
+	padding-left: 0;
+	margin: 0;
+	&:not(:last-child) {
+		margin-bottom: 30px;
+	}
+	& li {
+		padding-left: 30px;
+		position: relative;
+		font-size: 14px;
+		line-height: 1.75;
+		font-weight: 300;
+		& + li {
+			margin-top: 10px;
+		}
+		& i {
+			position: absolute;
+			left: 0;
+			top: 0;
+			color: $primary;
+			line-height: inherit;
+		}
+	}
+}

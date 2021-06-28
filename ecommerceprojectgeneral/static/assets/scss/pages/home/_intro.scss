@@ -1,0 +1,60 @@
+/*	4.1.2 - Intro CSS */
+.intro-icon {
+	color: $primary;
+	padding: 50px;
+	background-image: url(../images/bg/intro-bg-1.jpg);
+	background-size: cover;
+	background-position: center center;
+	background-repeat: no-repeat;
+	margin-top: -1px;
+	text-align: center;
+	& i {
+		font-size: 50px;
+	}
+	
+	// Responsoive
+	@media #{$tablet-device, $large-mobile} {
+		margin-bottom: 20px;
+	}
+}
+.intro-content {
+	& .title {
+		font-size: 28px;
+		&:last-child {
+			margin: 0;
+		}
+	}
+	
+	// Responsoive
+	@media #{$tablet-device, $large-mobile} {
+		text-align: center;
+		margin-bottom: 20px;
+	}
+	@media #{$small-mobile} {
+		& .title {
+			font-size: 24px;
+		}
+	}
+}
+.intro-button {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 100%;
+	margin-left: -15px;
+	padding-left: 30px;
+	border-left: 1px solid #ece9e4;
+	& .btn {}
+	
+	// Responsoive
+	@media #{$tablet-device, $large-mobile} {
+		padding-bottom: 30px;
+		padding-left: 0;
+		margin-left: 0;
+		border: none;
+		justify-content: center;
+	}
+}
+.intro-button-2 {
+	border-color: darken($primary, 5);
+}

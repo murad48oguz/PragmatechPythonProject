@@ -1,0 +1,41 @@
+/*	4.1.5 - Partner CSS	*/
+
+// Partner One
+.partner {
+	position: relative;
+	overflow: hidden;
+	& img {
+		max-width: 100%;
+		margin: auto;
+	}
+	& .hover-content {
+		position: absolute;
+		left: -100%;
+		top: 50%;
+		transform: translateY(-50%);
+		padding: 2px 10px;
+		background-color: rgba(249,245,240,.75);
+		z-index: 2;
+		text-transform: uppercase;
+		font-weight: 700;
+		color: $heading-color;
+		transition: $transition-default;
+	}
+	&:hover {
+		& img {
+			transform: scale(0.7) rotate(3deg);
+		}
+		& .hover-content {
+			left: 0;
+		}
+	}
+}
+// Partner Two
+.partner-2 {
+	position: relative;
+	overflow: hidden;
+	& img {
+		max-width: 100%;
+		margin: auto;
+	}
+}

@@ -1,0 +1,27 @@
+/*--
+/*  07. Footer CSS
+/*----------------------------------------*/
+
+// Footer Section
+.footer-section {
+    background-color: $heading-color;
+    padding: 60px 0;
+}
+
+// Copyright Section
+.copyright-section {
+    padding: 40px 0;
+    border-top: 1px solid #444444;
+    background-color: $heading-color;
+}
+
+// Copyright Content
+.copyright-content {
+    color: lighten($body-light, 25);
+    & a {
+        color: $primary;
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+}

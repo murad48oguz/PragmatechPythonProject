@@ -1,0 +1,551 @@
+/*----------------------------------------*/
+/*  01. Theme default CSS
+/*----------------------------------------*/
+
+@mixin placeholder {
+  &::-webkit-input-placeholder {@content}
+  &:-moz-placeholder           {@content}
+  &::-moz-placeholder          {@content}
+  &:-ms-input-placeholder      {@content}  
+}
+
+/*-- Google Font --*/
+@import url('https://fonts.googleapis.com/css?family=EB+Garamond:400,400i,500,500i,600,600i,700,700i,800,800i|Poppins:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&display=swap');
+
+/*-- Common Style --*/
+*, *::after, *::before {
+  box-sizing: border-box;
+}
+html, body, .site-wrapper {
+    height: 100%;
+}
+body{
+    background-color: $white;
+    font-size: 13px;
+    line-height: 1.75;
+    font-style: normal;
+    font-weight: 400;
+    visibility: visible;
+    font-family: $body-font;
+    color: $body-color;
+    position: relative;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: $heading-font;
+    color: $heading-color;
+    font-weight: 600;
+    margin-top: 0;
+    line-height: 1.5;
+}
+.h1, .h2, .h3, .h4, .h5, .h6 {
+    margin: 0;
+    line-height: 1.5;
+}
+h1, .h1 {
+    font-size: 36px;
+    // Responisve
+    @media #{$large-mobile} {
+        font-size: 30px;
+    }
+}
+h2, .h2 {
+    font-size: 30px;
+    // Responisve
+    @media #{$large-mobile} {
+        font-size: 24px;
+    }
+}
+h3, .h3 {
+    font-size: 24px;
+    // Responisve
+    @media #{$large-mobile} {
+        font-size: 20px;
+    }
+}
+h4, .h4 {
+    font-size: 18px;
+}
+h5, .h5 {
+    font-size: 16px;
+}
+h6, .h6 {
+    font-size: 14px;
+}
+p:last-child {
+    margin-bottom: 0;
+}
+a, button {
+    color: inherit;
+    display: inline-block;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+}
+a, button, img, input {
+    transition: $transition-default;
+}
+*:focus {
+    outline: none !important;
+}
+a:focus {
+    color: inherit;
+    outline: none;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: none;
+    color: $primary;
+}
+button, input[type="submit"] {
+    cursor: pointer;
+}
+img {
+    max-width: 100%;
+}
+
+input, textarea {
+    @include placeholder {
+        opacity: 1;
+    }
+}
+
+/*-- Common Classes --*/
+.fix {
+    overflow:hidden
+}
+.hidden {
+    display: none;
+}
+.clear{
+    clear: both;
+}
+.section, .main-wrapper {
+    float: left;
+    width: 100%;
+}
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 1200px;
+    }
+}
+@media #{$small-mobile}{
+    .container {
+        max-width: 450px;
+    }
+}
+@media #{$extra-small-mobile}{
+    .container {
+        max-width: 300px;
+    }
+}
+
+/*Background Color*/
+.bg-white {
+    background-color: #ffffff !important;
+}
+.bg-gray {
+    background-color: #f8f8f8 !important;
+}
+.bg-dark {
+    background-color: $heading-color !important
+}
+.bg-primary {
+    background-color: $primary !important
+}
+.bg-primary-light {
+    background-color: lighten($primary, 36) !important
+}
+.bg-secondary {
+    background-color: $secondary !important
+}
+.bg-success {
+    background-color: $success !important
+}
+.bg-danger {
+    background-color: $danger !important
+}
+.bg-warning {
+    background-color: $warning !important
+}
+.bg-info {
+    background-color: $info !important
+}
+
+/*Text Color*/
+.text-white {
+ color: $white !important
+}
+.text-body {
+ color: $body-color !important
+}
+.text-body-light {
+ color: $body-light !important
+}
+.text-heading {
+ color: $heading-color !important
+}
+.text-primary {
+ color: $primary !important
+}
+.text-secondary {
+ color: $secondary !important
+}
+.text-success {
+ color: $success !important
+}
+.text-danger {
+ color: $danger !important
+}
+.text-warning {
+ color: $warning !important
+}
+.text-info {
+ color: $info !important
+}
+
+/*Font Weight*/
+.fw-100 {
+    font-weight: 100;
+}
+.fw-200 {
+    font-weight: 200;
+}
+.fw-300 {
+    font-weight: 300;
+}
+.fw-400 {
+    font-weight: 400;
+}
+.fw-500 {
+    font-weight: 500;
+}
+.fw-600 {
+    font-weight: 600;
+}
+.fw-700 {
+    font-weight: 700;
+}
+.fw-800 {
+    font-weight: 800;
+}
+.fw-900 {
+    font-weight: 900;
+}
+
+/*White Space*/
+.white-space-nowrap {
+    white-space: nowrap;
+}
+
+/*--Tab Content & Pane Fix--*/
+.tab-content {
+    width: 100%;
+    & .tab-pane {
+        display: block;
+        height: 0;
+        max-width: 100%;
+        visibility: hidden;
+        overflow: hidden;
+        opacity: 0;
+        &.active {
+            height: auto;
+            visibility: visible;
+            opacity: 1;
+            overflow: visible;
+        }
+    }
+}
+
+/*--Background Image--*/
+[data-bg-image] {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/*--Section Spacing--*/
+.section-padding {
+    padding-top: 80px;
+    padding-bottom: 80px;
+    // Responsive
+    @media #{$large-mobile} {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+.section-padding-2 {
+    padding-top: 110px;
+    padding-bottom: 110px;
+    // Responsive
+    @media #{$desktop-device} {
+        padding-top: 90px;
+        padding-bottom: 90px;
+    }
+    @media #{$tablet-device} {
+        padding-top: 70px;
+        padding-bottom: 70px;
+    }
+    @media #{$large-mobile} {
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+}
+.section-margin {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    // Responsive
+    @media #{$large-mobile} {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+.section-margin-2 {
+    margin-top: 110px;
+    margin-bottom: 110px;
+    // Responsive
+    @media #{$desktop-device} {
+        margin-top: 90px;
+        margin-bottom: 90px;
+    }
+    @media #{$tablet-device} {
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+    @media #{$large-mobile} {
+        margin-top: 60px;
+        margin-bottom: 60px;
+    }
+}
+
+/*--Section Title--*/
+.section-title {
+    width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+    & .title {
+        font-size: 30px;
+		line-height: 1.25;
+        font-weight: 500;
+        letter-spacing: 2px;
+        color: $heading-color;
+        margin-top: -5px;
+        margin-bottom: 0;
+        &::after {
+            content: '\e900';
+            font-family: 'TMLawyer';
+            font-size: 9px;
+            color: $primary;
+            display: block;
+			margin-top: 7px;
+        }
+    }
+	// Responsive
+	@media #{$large-mobile} {
+		& .title {
+			font-size: 24px;
+		}
+	}
+}
+.section-title-2 {
+    width: 100%;
+    margin-bottom: 70px;
+    text-align: center;
+	& .sub-title {
+		font-size: 34px;
+		line-height: 1.25;
+		font-weight: 400;
+		color: $primary;
+		&:first-child {
+			margin-top: -5px;
+		}
+	}
+    & .title {
+		display: block;
+        font-size: 40px;
+		line-height: 1.25;
+        font-weight: 700;
+        color: $heading-color;
+        margin-bottom: 0;
+		text-transform: uppercase;
+		&:first-child {
+			margin-top: -5px;
+		}
+        &::after {
+            content: '\e900';
+            font-family: 'TMLawyer';
+            font-size: 9px;
+            color: $primary;
+            display: block;
+			margin-top: 7px;
+        }
+    }
+	// Responsive
+	@media #{$tablet-device} {
+    	margin-bottom: 50px;
+		& .sub-title {
+			font-size: 24px;
+		}
+		& .title {
+			font-size: 32px;
+		}
+	}
+	@media #{$large-mobile} {
+    	margin-bottom: 40px;
+		& .sub-title {
+			font-size: 20px;
+		}
+		& .title {
+			font-size: 28px;
+		}
+	}
+	@media #{$small-mobile} {
+		& .sub-title {
+			font-size: 18px;
+		}
+		& .title {
+			font-size: 24px;
+		}
+	}
+	@media #{$extra-small-mobile} {
+		& .sub-title {
+			font-size: 16px;
+		}
+		& .title {
+			font-size: 20px;
+		}
+	}
+}
+.section-title-left {
+	text-align: left;
+	& .title {
+		&::after {
+			content: '\e901';
+		}
+	}
+}
+.section-title-right {
+	text-align: right;
+	& .title {
+		&::after {
+			content: '\e902';
+		}
+	}
+}
+
+/*Page Pagination*/
+.page-pagination {
+    & ul {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        padding: 0;
+        margin-right: -15px;
+        margin-bottom: -15px;
+        & li {
+            line-height: 50px;
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 15px;
+            margin-bottom: 15px;
+            & a {
+                display: block;
+                border: none;
+                background-color: lighten($primary, 36);
+                color: $heading-color;
+                &:hover {
+                    background-color: $primary;
+                    color: $white;
+                }
+            }
+            &.page-numbers {
+                width: auto;
+                & a {
+                    padding: 0 20px;
+                }
+            }
+            &.active {
+                background-color: $primary;
+                color: $white;
+            }
+        }
+    }
+	&.center {
+		& ul {
+			justify-content: center;
+		}
+	}
+	&.right {
+		& ul {
+			justify-content: flex-end;
+		}
+	}
+}
+
+/*Custom Animation*/
+@-webkit-keyframes cusFadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes cusFadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 50px, 0);
+    transform: translate3d(0, 50px, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+.cusFadeInUp {
+  -webkit-animation-name: cusFadeInUp;
+  animation-name: cusFadeInUp;
+}
+
+/*Scroll To Top*/
+.scrolltotop {
+	width: 40px;
+	height: 40px;
+	background-color: $primary;
+	color: $white;
+	border: none;
+	position: fixed;
+	right: 30px;
+	bottom: -90px;
+	z-index: 9999;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	opacity: 0;
+	visibility: hidden;
+	&.show {
+		bottom: 30px;
+		opacity: 1;
+		visibility: visible;
+	}
+	&:hover {
+		background-color: $heading-color;
+	}
+	&:focus {
+		color: $white;
+	}
+	& i {
+		font-size: 18px;
+	}
+}

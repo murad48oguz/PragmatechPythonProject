@@ -1,0 +1,30 @@
+/*--
+/*  4.6 - Award CSS
+/*----------------------------------------*/
+
+// Awards Wrap
+.awards-wrap {
+    max-width: 670px;
+    margin: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+// Awards
+.awards {
+    & .awards-image {
+        width: 160px;
+        text-align: center;
+        & img {}
+    }
+    & .awards-content {
+        & .title {}
+        & .desc {}
+    }
+    // Responsive
+    @media #{$large-mobile} {
+        & .awards-content {
+            text-align: center;
+        }
+    }
+}
