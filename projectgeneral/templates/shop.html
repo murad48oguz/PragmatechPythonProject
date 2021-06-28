@@ -1,0 +1,908 @@
+{% extends "base.html"%}
+{% block body %} 
+{% load static %}
+
+    <div class="main-wrapper">
+
+        <!--Header Section Start-->
+        <div class="header-section d-none d-lg-block">
+
+            <!--Header Top Start-->
+            <div class="header-top">
+                <div class="container">
+                    <div class="row">
+
+                        <!--Left Start-->
+                        <div class="col-lg-6">
+                            <div class="header-top-left">
+                                <div class="header-top-left-info">
+                                    <p><i class="fa fa-envelope-o"></i><a href="mailto:contact@yoursite.com">contact@yoursite.com</a></p>
+                                    <p><i class="fa fa-phone"></i><a href="#">1.800.123.4569</a></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Left End-->
+
+                        <!--Right Start-->
+                        <div class="col-lg-6">
+                            <div class="header-top-right">
+                                <p class="header-top-right-text">Add an interesting message for your visitors</p>
+                                <a href="cart.html" class="header-top-right-cart">
+                                    <i class="ion-bag" data-count="2"></i> $43.00
+                                </a>
+                            </div>
+                        </div>
+                        <!--Right End-->
+
+                    </div>
+                </div>
+            </div>
+            <!--Header Top End-->
+
+            <!--Header Middle Start-->
+            <div class="header-middle">
+                <div class="row no-gutters">
+
+                    <!--Left Start-->
+                    <div class="header-middle-left col-auto">
+                        <div class="header-middle-social">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-vimeo"></i></a>
+                        </div>
+                    </div>
+                    <!--Left End-->
+
+                    <!--Center Start-->
+                    <div class="header-middle-center col">
+                        <div class="header-logo">
+                            <a href="index.html"><img src="{% static 'assets/images/logo/logo_1.png' %}" alt="Lawyer Attorneys"></a>
+                        </div>
+                    </div>
+                    <!--Center End-->
+
+                    <!--Right Start-->
+                    <div class="header-middle-right col-auto">
+                        <div class="header-middle-free-case">
+                            <a href="contact-us-1.html"><i class="pe-7s-culture"></i>FREE CASE EVALUATION</a>
+                        </div>
+                    </div>
+                    <!--Right End-->
+
+                </div>
+            </div>
+            <!--Header Middle End-->
+
+            <!--Header Bottom Start-->
+            <div class="header-bottom">
+                <div class="container">
+                    <div class="row">
+
+                        <!--Left Start-->
+                        <div class="col">
+                            <div class="primary-menu">
+                                <nav>
+                                    <ul>
+                                        <li class="menu-item-has-children"><a href="index.html">Home</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="index.html">Homepage 01</a></li>
+                                                <li><a href="index-2.html">Homepage 02</a></li>
+                                                <li><a href="index-3.html">Homepage 03</a></li>
+                                                <li><a href="index-4.html">Homepage 04</a></li>
+                                                <li><a href="index-5.html">Homepage 05</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a href="practice-areas-1.html">Practice Areas</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="practice-areas-1.html">Practice Areas 01</a></li>
+                                                <li><a href="practice-areas-2.html">Practice Areas 02</a></li>
+                                                <li><a href="practice-areas-3.html">Practice Areas 03</a></li>
+                                                <li><a href="practice-areas-4.html">Practice Areas 04</a></li>
+                                                <li><a href="practice-bank-financial.html">Bank & Financial</a></li>
+                                                <li><a href="practice-capital-market.html">Capital Market</a></li>
+                                                <li><a href="practice-car-accident.html">Car Accident</a></li>
+                                                <li><a href="practice-corporate.html">Corporate</a></li>
+                                                <li><a href="practice-employment-law.html">Employment Law</a></li>
+                                                <li><a href="practice-family-law.html">Family Law</a></li>
+                                                <li><a href="practice-personal-injury.html">Personal Injury</a></li>
+                                            </ul>
+                                        </li>
+                                        <li><a href="case-results.html">Case Results</a></li>
+                                        <li class="menu-item-has-children"><a href="#">Our Firm</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="attorneys.html">Attorneys</a></li>
+                                                <li><a href="single-attorney.html">Single Attorney</a></li>
+                                                <li><a href="honnors-and-awards.html">Honnors And Awards</a></li>
+                                                <li><a href="careers.html">Careers</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a href="news.html">Legal News</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="news.html">News</a></li>
+                                                <li><a href="news-2-column.html">News Two Columns</a></li>
+                                                <li><a href="news-details.html">News Details</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a href="shop.html">Shop</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="shop.html">Shop</a></li>
+                                                <li><a href="shop-2-column.html">Shop 2 Column</a></li>
+                                                <li><a href="product-details.html">Product Details</a></li>
+                                                <li><a href="cart.html">Shopping Cart</a></li>
+                                                <li><a href="checkout.html">Checkout</a></li>
+                                                <li><a href="login-register.html">Login & Register</a></li>
+                                                <li><a href="my-account.html">My Account</a></li>
+                                                <li><a href="wishlist.html">Wishlist</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="menu-item-has-children"><a href="#">Pages</a>
+                                            <ul class="sub-menu">
+                                                <li><a href="about-us.html">About us</a></li>
+                                                <li><a href="contact-us-1.html">Contact us 1</a></li>
+                                                <li><a href="contact-us-2.html">Contact us 2</a></li>
+                                                <li><a href="faq.html">F.A.Q</a></li>
+                                                <li><a href="gallery.html">Gallery</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
+                                </nav>
+                            </div>
+                        </div>
+                        <!--Left End-->
+
+                        <!--Right Start-->
+                        <div class="col-auto">
+                            <button class="header-bottom-search-toggle header-search-toggle" data-target="#fullscreen-search-overlay"><i class="fa fa-search"></i></button>
+                        </div>
+                        <!--Right End-->
+
+                    </div>
+                </div>
+            </div>
+            <!--Header Bottom End-->
+
+        </div>
+        <!--Header Section End-->
+
+
+        <!--Mobile Header Section Start-->
+        <div class="mobile-header d-block d-lg-none">
+            <div class="container">
+                <div class="row">
+
+                    <!--Left Start-->
+                    <div class="col d-flex align-items-center">
+                        <div class="header-logo mobile-header-logo">
+                            <a href="index.html"><img src="{% static 'assets/images/logo/logo_1.png' %}" alt="Lawyer Attorneys"></a>
+                        </div>
+                    </div>
+                    <!--Left End-->
+
+                    <!--Right Start-->
+                    <div class="col-auto d-flex align-items-center">
+                        <a href="cart.html" class="mobile-header-cart">
+                            <i class="ion-bag" data-count="2"></i>
+                        </a>
+                        <div class="mobile-header-right-toggles">
+                            <button class="header-search-toggle" data-target="#fullscreen-search-overlay"><i class="fa fa-search"></i></button>
+                            <button class="mobile-menu-toggle"><i class="ion-navicon"></i></button>
+                        </div>
+                    </div>
+                    <!--Right End-->
+
+                </div>
+            </div>
+        </div>
+        <!--Mobile Header Section End-->
+
+
+        <!--Offcanvas Section Start-->
+        <div id="offcanvas" class="offcanvas-section">
+            <button class="offcanvas-close" data-target="#offcanvas">&times;</button>
+            <div class="offcanvas-wrap">
+                <div class="inner">
+
+                    <div class="offcanvas-menu">
+                        <nav>
+                            <ul>
+                                <li class="menu-item-has-children"><a href="index.html">Home</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="index.html">Homepage 01</a></li>
+                                        <li><a href="index-2.html">Homepage 02</a></li>
+                                        <li><a href="index-3.html">Homepage 03</a></li>
+                                        <li><a href="index-4.html">Homepage 04</a></li>
+                                        <li><a href="index-5.html">Homepage 05</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="practice-areas-1.html">Practice Areas</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="practice-areas-1.html">Practice Areas 01</a></li>
+                                        <li><a href="practice-areas-2.html">Practice Areas 02</a></li>
+                                        <li><a href="practice-areas-3.html">Practice Areas 03</a></li>
+                                        <li><a href="practice-areas-4.html">Practice Areas 04</a></li>
+                                        <li><a href="practice-bank-financial.html">Bank & Financial</a></li>
+                                        <li><a href="practice-capital-market.html">Capital Market</a></li>
+                                        <li><a href="practice-car-accident.html">Car Accident</a></li>
+                                        <li><a href="practice-corporate.html">Corporate</a></li>
+                                        <li><a href="practice-employment-law.html">Employment Law</a></li>
+                                        <li><a href="practice-family-law.html">Family Law</a></li>
+                                        <li><a href="practice-personal-injury.html">Personal Injury</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="case-results.html">Case Results</a></li>
+                                <li class="menu-item-has-children"><a href="#">Our Firm</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="attorneys.html">Attorneys</a></li>
+                                        <li><a href="single-attorney.html">Single Attorney</a></li>
+                                        <li><a href="honnors-and-awards.html">Honnors And Awards</a></li>
+                                        <li><a href="careers.html">Careers</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="news.html">Legal News</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="news.html">News</a></li>
+                                        <li><a href="news-2-column.html">News Two Columns</a></li>
+                                        <li><a href="news-details.html">News Details</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="shop.html">Shop</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="shop.html">Shop</a></li>
+                                        <li><a href="shop-2-column.html">Shop 2 Column</a></li>
+                                        <li><a href="product-details.html">Product Details</a></li>
+                                        <li><a href="cart.html">Shopping Cart</a></li>
+                                        <li><a href="checkout.html">Checkout</a></li>
+                                        <li><a href="login-register.html">Login & Register</a></li>
+                                        <li><a href="my-account.html">My Account</a></li>
+                                        <li><a href="wishlist.html">Wishlist</a></li>
+                                    </ul>
+                                </li>
+                                <li class="menu-item-has-children"><a href="#">Pages</a>
+                                    <ul class="sub-menu">
+                                        <li><a href="about-us.html">About us</a></li>
+                                        <li><a href="contact-us-1.html">Contact us 1</a></li>
+                                        <li><a href="contact-us-2.html">Contact us 2</a></li>
+                                        <li><a href="faq.html">F.A.Q</a></li>
+                                        <li><a href="gallery.html">Gallery</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+
+                    <div class="offcanvas-info mt-auto">
+                        <p><i class="fa fa-envelope-o"></i><a href="mailto:contact@yoursite.com">contact@yoursite.com</a></p>
+                        <p><i class="fa fa-phone"></i><a href="#">1.800.123.4569</a></p>
+                    </div>
+                    <div class="offcanvas-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#"><i class="fa fa-vimeo"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!--Offcanvas Section End-->
+        <!--OffCanvas Overlay-->
+        <div class="offcanvas-overlay"></div>
+
+        <!--Fullscreen Search Overlay Start-->
+        <div id="fullscreen-search-overlay">
+            <div id="fullscreen-search-form">
+                <button class="fullscreen-search-close" data-target="#fullscreen-search-overlay"><i class="fa fa-close"></i></button>
+                <form action="#">
+                    <input type="text" placeholder="Search...">
+                </form>
+                <p class="search-note">* Type a keyword then press Enter</p>
+            </div>
+        </div>
+        <!--Fullscreen Search Overlay End-->
+
+        <!-- Page Banner Section Start -->
+        <div class="page-banner-section section">
+            <div class="container">
+
+                <!--Page Title Container Start-->
+                <div class="page-title-container">
+                    <div class="inner">
+
+                        <h1 class="page-title">Shop Full Width</h1>
+                        <ul class="page-breadcrumb">
+                            <li><a href="index.html">Home</a></li>
+                            <li>Shop Full Width</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!--Page Title Container End-->
+
+            </div>
+        </div><!-- Page Banner Section End -->
+
+        <!--Shop Section Section Start-->
+        <div class="section section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <!--Shop Top Bar Start-->
+                    <div class="col-12 mb-30">
+
+                        <!--Shop Top Toolbar Start-->
+                        <div class="row justify-content-between align-items-center">
+
+                            <div class="col-sm-auto col-12"><span>Showing 1–16 of 17 results</span></div>
+                            <div class="col-sm-auto col-12 mt-3 mt-sm-0">
+                                <select name="orderby">
+                                    <option value="menu_order">Default sorting</option>
+                                    <option value="popularity">Sort by popularity</option>
+                                    <option value="rating">Sort by average rating</option>
+                                    <option value="date">Sort by latest</option>
+                                    <option value="price">Sort by price: low to high</option>
+                                    <option value="price-desc">Sort by price: high to low</option>
+                                </select>
+                            </div>
+
+                        </div>
+                        <!--Shop Top Toolbar End-->
+
+                    </div>
+                    <!--Shop Top Bar End-->
+
+                    <!--Shop Product Wrapper/Container Start-->
+                    <div class="col-12">
+
+                        <!--Product Wrapper Start-->
+                        <div class="row">
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-1.jpg' %}" alt=""></a>
+                                            <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">Album</a></h4>
+                                            <span class="prices">
+											<span class="price-new">$15.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-2.jpg' %}" alt=""></a>
+                                            <span class="labels">
+											<span class="label label-sale">sale</span>
+                                            </span>
+                                            <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">Beanie</a></h4>
+                                            <span class="prices">
+											<span class="price-old">$20.00</span>
+                                            <span class="price-new">$18.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-3.jpg' %}" alt=""></a>
+                                            <span class="labels">
+											<span class="label label-sale">sale</span>
+                                            </span>
+                                            <a href="#" class="wishlist active"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">Beanie with Logo</a></h4>
+                                            <span class="prices">
+											<span class="price-old">$20.00</span>
+                                            <span class="price-new">$18.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-4.jpg' %}" alt=""></a>
+                                            <span class="labels">
+											<span class="label label-sale">sale</span>
+                                            </span>
+                                            <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">Belt</a></h4>
+                                            <span class="prices">
+											<span class="price-old">$65.00</span>
+                                            <span class="price-new">$55.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-5.jpg' %}" alt=""></a>
+                                            <span class="labels">
+											<span class="label label-hot">hot</span>
+                                            <span class="label label-sale">sale</span>
+                                            </span>
+                                            <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">Cap</a></h4>
+                                            <span class="prices">
+											<span class="price-old">$18.00</span>
+                                            <span class="price-new">$16.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-6.jpg' %}" alt=""></a>
+                                            <span class="labels">
+											<span class="label label-sale">sale</span>
+                                            </span>
+                                            <a href="#" class="wishlist active"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">Hoodie</a></h4>
+                                            <span class="prices">
+											<span class="price-new">$42.00 - $45.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-7.jpg' %}" alt=""></a>
+                                            <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">Hoodie with Logo</a></h4>
+                                            <span class="prices">
+											<span class="price-new">$45.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-8.jpg' %}" alt=""></a>
+                                            <span class="labels">
+											<span class="label label-hot">hot</span>
+                                            </span>
+                                            <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">Hoodie with Zipper</a></h4>
+                                            <span class="prices">
+											<span class="price-new">$45.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-9.jpg' %}" alt=""></a>
+                                            <span class="labels">
+											<span class="label label-sale">sale</span>
+                                            </span>
+                                            <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">Logo Collection</a></h4>
+                                            <span class="prices">
+											<span class="price-new">$18.00 - $45.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-10.jpg' %}" alt=""></a>
+                                            <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">Long Sleeve Tee</a></h4>
+                                            <span class="prices">
+											<span class="price-new">$25.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-11.jpg' %}" alt=""></a>
+                                            <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">Polo</a></h4>
+                                            <span class="prices">
+											<span class="price-new">$20.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-12.jpg' %}" alt=""></a>
+                                            <span class="labels">
+											<span class="label label-sale">sale</span>
+                                            </span>
+                                            <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">Single</a></h4>
+                                            <span class="prices">
+											<span class="price-old">$3.00</span>
+                                            <span class="price-new">$2.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-13.jpg' %}" alt=""></a>
+                                            <span class="labels">
+											<span class="label label-hot">hot</span>
+                                            </span>
+                                            <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">Sunglasses</a></h4>
+                                            <span class="prices">
+											<span class="price-new">$90.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-14.jpg' %}" alt=""></a>
+                                            <a href="#" class="wishlist active"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">T-Shirt</a></h4>
+                                            <span class="prices">
+											<span class="price-new">$18.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-15.jpg' %}" alt=""></a>
+                                            <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">T-Shirt with Logo</a></h4>
+                                            <span class="prices">
+											<span class="price-new">$18.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                            <!--Product Item Start-->
+                            <div class="col-lg-3 col-md-4 col-sm-6 col-12 mb-30">
+                                <div class="product-item">
+                                    <div class="inner">
+
+                                        <div class="media">
+                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-4.jpg' %}" alt=""></a>
+                                            <span class="labels">
+											<span class="label label-hot">hot</span>
+                                            </span>
+                                            <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
+                                        </div>
+                                        <div class="content">
+                                            <h4 class="title"><a href="product-details.html">V-Neck T-Shirt</a></h4>
+                                            <span class="prices">
+											<span class="price-new">$15.00 - $20.00</span>
+                                            </span>
+                                            <a href="#" class="add-to-cart"><i class="ion-bag"></i> Add to Cart</a>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Product Item End-->
+
+                        </div>
+                        <!--Product Wrapper End-->
+
+                    </div>
+                    <!--Shop Product Wrapper/Container End-->
+
+                    <!--Shop Bottom Bar Start-->
+                    <div class="col-12 mt-20">
+
+                        <!--Pagination Start-->
+                        <div class="row">
+                            <div class="page-pagination center col-12">
+                                <ul>
+                                    <li class="active">1</li>
+                                    <li><a href="#">2</a></li>
+                                    <li><a href="#">3</a></li>
+                                    <li class="page-numbers"><a href="#">Next →</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!--Pagination End-->
+
+                    </div>
+                    <!--Shop Bottom Bar End-->
+
+                </div>
+            </div>
+        </div>
+        <!--Shop Section Section End-->
+
+        <div class="newsletter-socail-section section" data-bg-image="{% static 'assets/images/bg/newsletter-bg.png' %}">
+            <div class="container">
+                <div class="row justify-content-between align-items-center mbn-30">
+
+                    <!--Newsletter Start-->
+                    <div class="col-lg-auto col-12 mb-30">
+                        <div class="newsletter-form">
+                            <form id="mc-form" class="mc-form">
+                                <input id="mc-email" autocomplete="off" type="email" placeholder="Enter your e-mail address">
+                                <input id="mc-submit" class="btn btn-primary" type="submit" value="SUBSCRIBE">
+                            </form>
+                            <!-- mailchimp-alerts Start -->
+                            <div class="mailchimp-alerts text-centre">
+                                <div class="mailchimp-submitting"></div><!-- mailchimp-submitting end -->
+                                <div class="mailchimp-success text-success"></div><!-- mailchimp-success end -->
+                                <div class="mailchimp-error text-danger"></div><!-- mailchimp-error end -->
+                            </div><!-- mailchimp-alerts end -->
+                        </div>
+                    </div>
+                    <!--Newsletter End-->
+
+                    <!--Social Start-->
+                    <div class="d-flex flex-wrap align-items-center col-lg-auto col-12 mb-25">
+
+                        <h3 class="text-white text-uppercase mr-3 mb-0 mb-5 mb-sm-0">Social</h3>
+                        <div class="footer-top-socail mb-5 mb-sm-0">
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-vimeo"></i></a>
+                        </div>
+                    </div>
+                    <!--Social End-->
+
+                </div>
+            </div>
+        </div>
+
+        <!--Footer Section Start-->
+        <div class="footer-section section">
+            <div class="container">
+                <div class="footer-widget-area row">
+
+                    <!--Footer Widget Start-->
+                    <div class="footer-widget col-lg-3 col-md-6 col-12">
+                        <h4 class="footer-widget-title">ABOUT US</h4>
+                        <div class="footer-widget-text">
+                            <p>The Lawyer Attorneys Firm is a general practice firm that has served individuals and business for over twenty years.</p>
+                            <p>We are dedicated lawyers who work efficiently and hard to provide you the best law service.</p>
+                        </div>
+                    </div>
+                    <!--Footer Widget End-->
+
+                    <!--Footer Widget Start-->
+                    <div class="footer-widget col-lg-3 col-md-6 col-12">
+                        <h4 class="footer-widget-title">EXPLORE OUR SITE</h4>
+                        <ul class="footer-widget-link">
+                            <li><a href="practice-areas-1.html">Practice Areas</a></li>
+                            <li><a href="case-results.html">Case Results</a></li>
+                            <li><a href="about-us.html">Our Firm</a></li>
+                            <li><a href="careers.html">Careers</a></li>
+                            <li><a href="faq.html">F.A.Q</a></li>
+                            <li><a href="contact-us-1.html">Contact Us</a></li>
+                        </ul>
+                    </div>
+                    <!--Footer Widget End-->
+
+                    <!--Footer Widget Start-->
+                    <div class="footer-widget col-lg-3 col-md-6 col-12">
+                        <h4 class="footer-widget-title">KEEP IN TOUCH</h4>
+                        <div class="footer-widget-text">
+                            <p><i class="fa fa-map-marker"></i> 14 Tottenham Road, London, England.</p>
+                            <p><i class="fa fa-phone"></i> (102) 6666 8888</p>
+                            <p><i class="fa fa-envelope"></i> <a href="mailto:info@demo.com">info@demo.com</a></p>
+                            <p><i class="fa fa-fax"></i> (102) 8888 9999</p>
+                            <p><i class="fa fa-clock-o"></i> Mon - Sat: 9:00 - 18:00</p>
+                        </div>
+                    </div>
+                    <!--Footer Widget End-->
+
+                    <!--Footer Widget Start-->
+                    <div class="footer-widget col-lg-3 col-md-6 col-12">
+                        <h4 class="footer-widget-title">LATEST POSTS</h4>
+                        <ul class="footer-widget-link">
+                            <li><a href="news-details.html">EB-5 Legislation Pending</a></li>
+                            <li><a href="news-details.html">Personal Injury Case Settled</a></li>
+                            <li><a href="news-details.html">3 Year Old Injured In Restaurant</a></li>
+                            <li><a href="news-details.html">Audio Post</a></li>
+                            <li><a href="news-details.html">A Link Post</a></li>
+                            <li><a href="news-details.html">A Quote Post</a></li>
+                        </ul>
+                    </div>
+                    <!--Footer Widget End-->
+
+                </div>
+            </div>
+        </div>
+        <!--Footer Section End-->
+
+        <!--Copyright Section Start-->
+        <div class="copyright-section section">
+            <div class="container">
+                <div class="row justify-content-between">
+
+                    <!--Left Start-->
+                    <div class="copyright-content text-center col-lg-auto col-12">
+                        <p>Made by <a href="https://themeforest.net/user/bootxperts/portfolio">BootXperts</a></p>
+                    </div>
+                    <!--Left End-->
+
+                    <!--Right Start-->
+                    <div class="copyright-content text-center col-lg-auto col-12">
+                        <p>&copy; Copyrights <span class="text-primary">Edwards</span>, Inc. All rights reserved.</p>
+                    </div>
+                    <!--Right End-->
+
+                </div>
+            </div>
+        </div>
+        <!--Copyright Section End-->
+
+
+    </div>
+
+
+
+
+{% endblock %}
