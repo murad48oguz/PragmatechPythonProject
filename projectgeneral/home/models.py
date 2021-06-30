@@ -7,6 +7,8 @@ class Attorney(models.Model):
     absolutejob = models.CharField(max_length=40)
     biography = models.TextField()
     image = models.ImageField()
+    date = models.DateField(auto_now=True)
     
-  
+    def __str__(self):
+        return self.name
     
