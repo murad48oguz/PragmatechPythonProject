@@ -1,6 +1,7 @@
 from django.db import models
 
 # Create your models here.
+
 class Attorney(models.Model):
     name = models.CharField(max_length=40)
     surname = models.CharField(max_length=40)
@@ -11,4 +12,5 @@ class Attorney(models.Model):
     
     def __str__(self):
         return self.name
+    
     
