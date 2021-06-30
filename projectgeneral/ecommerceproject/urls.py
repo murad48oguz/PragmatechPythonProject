@@ -28,6 +28,7 @@ urlpatterns = [
     path('faq/',views.faq),
     path('attorneys/',views.attorneys),
     path('shop/',views.productdetail),
+    path('singleattorney/',views.singleattorney),
     # path('myaccount/',views.myaccount),
     
 ]

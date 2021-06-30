@@ -28,3 +28,7 @@ def productdetail(request):
 
 def attorneys(request):
     return render(request,"attorneys.html")
+
+
+def singleattorney(request):
+    return render(request,"single-attorney.html")
