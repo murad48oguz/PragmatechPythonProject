@@ -7,6 +7,7 @@ admin.site.site_header = " This is Django Admin Panel"
 
 class AttorneyAdmin(admin.ModelAdmin):
     list_display = ('name','date',)
-    list_filter = ('date',)
+    list_filter = ('date','name')
+    search_fields = ['name','surname','absolutejob']
     
 admin.site.register(Attorney,AttorneyAdmin)
