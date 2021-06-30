@@ -7,3 +7,6 @@ class Attorney(models.Model):
     absolutejob = models.CharField(max_length=40)
     biography = models.TextField()
     image = models.ImageField()
+    
+  
+    
