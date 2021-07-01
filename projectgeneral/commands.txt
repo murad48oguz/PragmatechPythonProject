@@ -5,14 +5,29 @@ from home.models import Attorney
 >>> Attorney.objects.all()
 <QuerySet [<Attorney: Murad>, <Attorney: Steve>]>
 >>> Attorney.objects.create(name="Daniel", surname = "Jobs", absolutejob = "Bank/Programmist" )
+
 <Attorney: Daniel>
 Attorney.objects.order_by("date")
 <QuerySet [<Attorney: Murad>, <Attorney: Steve>, <Attorney: Daniel>]>
+
 Attorney.objects.order_by("surname")
 <QuerySet [<Attorney: Steve>, <Attorney: Murad>, <Attorney: Daniel>]>
+
  Attorney.objects.filter(name = "Murad")
 <QuerySet [<Attorney: Murad>]>
+
 Attorney.objects.order_by('name')[0:5]   
 <QuerySet [<Attorney: Daniel>, <Attorney: Eldar>, <Attorney: Murad>, <Attorney: Steve>]>
 Attorney.objects.order_by('name')[0:2]   
 <QuerySet [<Attorney: Daniel>, <Attorney: Eldar>]>
+
+Attorney.objects.get(id=2)
+<Attorney: Steve>
+
+attorney1 = Attorney.objects.all()
+attorney1.first()
+<Attorney: Murad>
+attorney1.last()
+<Attorney: Orxan>
+attorney1.delete()
+(5, {'home.Attorney': 5})
