@@ -21,7 +21,7 @@ def faq(request):
     return render(request,"faq.html")
 
 def productdetail(request):
-    return render(request,"product-detail.html")
+    return render(request,"product-details.html")
 
 # def myaccount(request):
 #     return render(request,"my-account.html")

@@ -29,6 +29,7 @@ urlpatterns = [
     path('attorneys/',views.attorneys),
     path('shop/',views.productdetail),
     path('singleattorney/',views.singleattorney),
+    path('productdetail/',views.productdetail),
     # path('myaccount/',views.myaccount),
     
 ]
