@@ -13,6 +13,10 @@ class Attorney(models.Model):
     def __str__(self):
         return self.name
     
- 
+class Contact():
+    name = models.CharField(max_length=30)
+    email= models.EmailField()
+    case_details = models.TextField()
 
+    
     
