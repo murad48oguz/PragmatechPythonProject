@@ -18,5 +18,9 @@ class Contact():
     email= models.EmailField()
     case_details = models.TextField()
 
-    
-    
+
+class FreeCase():
+   name = models.CharField(max_length=30)
+   email= models.EmailField()
+   subject = models.CharField(max_length=30)
+   case_details = models.TextField()
