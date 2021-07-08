@@ -28,7 +28,22 @@ class FreeCase(models.Model):
 class Shop(models.Model):
     stuffname = models.CharField(max_length = 40)
     image = models.ImageField() 
-    price = models.IntegerField()
+    price = models.DecimalField(max_digits=7, decimal_places=2)
     status = models.BooleanField(blank=True)
     
+    
+    
+    
+class ProductDetail(models.Model):
+    productname = models.CharField(max_length=20)
+    price = models.DecimalField(max_digits=7, decimal_places=2)
+    description = models.TextField()
+    below_description = models.TextField()
+    
+    
+    
+class Reviews(models.Model):
+    review = models.TextField()
+    name = models.CharField(max_length=30)
+    email = models.EmailField()
     
