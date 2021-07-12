@@ -32,4 +32,5 @@ def attorneys(request):
 
 
 def singleattorney(request):
-    return render(request,"single-attorney.html")
+    singleattorney = Attorney.objects.all()
+    return render(request,"single-attorney.html",{'singleattorney': singleattorney})

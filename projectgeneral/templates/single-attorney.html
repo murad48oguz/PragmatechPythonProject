@@ -2,6 +2,7 @@
 {% block body %} 
 {% load static %}
 
+
     <div class="main-wrapper">
 
       <!--Header Section Start-->
@@ -246,14 +247,15 @@
             <div class="container">
 
                 <!--Page Title Container Start-->
+                {% for attorney in singleattorney %}
                 <div class="page-title-container">
                     <div class="inner">
 
-                        <h1 class="page-title">Kellan Dust</h1>
+                        <h1 class="page-title">{{attorney.name}} {{attorney.surname}}</h1>
                         <ul class="page-breadcrumb">
-                            <li><a href="index.html">Home</a></li>
+                            <li><a href="http://localhost:8000/">Home</a></li>
                             <li><a href="http://localhost:8000/attorneys">Attorneys</a></li>
-                            <li>Kellan Dust</li>
+                            <li>{{attorney.name}} {{attorney.surname}}</li>
                         </ul>
 
                     </div>
@@ -264,6 +266,7 @@
         </div><!-- Page Banner Section End -->
 
         <!--Single Attorney(Team) Section Start-->
+        
         <div class="section">
             <div class="row no-gutters">
 
@@ -275,10 +278,10 @@
 
                 <!--Team Content Start-->
                 <div class="single-team-content col-lg-6 col-12">
-                    <h1 class="name">Kellan Dust</h1>
-                    <span class="title">BANK & FINANCIAL LAWYER</span>
+                    <h1 class="name">{{attorney.name}} {{attorney.surname}}</h1>
+                    <span class="title">{{attorney.absolutejob}}</span>
                     <div class="desc">
-                        <p>Nam ut libero nec tellus rutrum sagittis. Pellentesque euismod sapien faucibus libero dignissim tempor. Donec sit amet dictum arcu. Mauris interdum, felis in rhoncus cursus, felis nisl sagittis justo, vel finibus nisl erat id tellus. Nullam sed lacus orci. Maecenas vitae dui egestas, congue justo id, sollicitudin eros. Sed facilisis aliquam sapien eu aliquam. Mauris sapien risus, accumsan eu ullamcorper viverra, rutrum eget urna. Proin finibus, mauris ac pellentesque dignissim.</p>
+                        <p>{{attorney.biography}}</p>
                     </div>
                     <div class="single-team-socail">
                         <a href="#"><i class="fa fa-facebook"></i></a>
@@ -300,6 +303,8 @@
             </div>
         </div>
         <!--Single Attorney(Team) Section End-->
+
+     {% endfor %}
 
         <!--Single Attorney(Team) Skill Section Start-->
         <div class="single-team-skill-section section section-padding">
