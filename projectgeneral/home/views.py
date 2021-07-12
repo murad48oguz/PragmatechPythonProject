@@ -1,5 +1,5 @@
 from django.shortcuts import render
-
+from .models import *
 # Create your views here.
 
 def index(request):
@@ -27,7 +27,8 @@ def productdetail(request):
 #     return render(request,"my-account.html")
 
 def attorneys(request):
-    return render(request,"attorneys.html")
+    attorney = Attorney.objects.all()
+    return render(request,"attorneys.html", {'attorney':attorney})
 
 
 def singleattorney(request):

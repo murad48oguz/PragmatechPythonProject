@@ -151,10 +151,7 @@
                                 <li class="menu-item-has-children"><a href="http://localhost:8000/">Home</a>
                                     <ul class="sub-menu">
                                         
-                                        <li><a href="index-2.html">Homepage 02</a></li>
-                                        <li><a href="index-3.html">Homepage 03</a></li>
-                                        <li><a href="index-4.html">Homepage 04</a></li>
-                                        <li><a href="index-5.html">Homepage 05</a></li>
+                                        
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children"><a href="practice-areas-1.html">Practice Areas</a>
@@ -266,98 +263,119 @@
         </div><!-- Page Banner Section End -->
 
         <!--Attorneys Section Start-->
-        <div class="section section-padding">
-            <div class="container">
-                <div class="row mbn-30">
+        {% for attorney in attorney %}
 
-                    <!--Attorney Start-->
-                    <div class="col-lg-4 col-sm-6 col-12 mb-30">
-                        <div class="team text-center">
-                            <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-1.jpg' %}" alt=""></a>
-                            <div class="team-content">
-                                <h3 class="name">Kellan Dust</h3>
-                                <span class="title">BANK & FINANCIAL LAWYER</span>
-                                <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
-                                <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
-                            </div>
-                        </div>
+            <div class="col-lg-4 col-sm-6 col-12 mb-30">
+                <div class="team text-center">
+                    <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-1.jpg' %}" alt=""></a>
+                    <div class="team-content">
+                        <h3 class="name">{{attorney.name}} {{attorney.surname}}</h3>
+                        <span class="title">{{attorney.absolutejob}}</span>
+                        <p class="desc">{{attorney.biography}}</p>
+                        <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
                     </div>
-                    <!--Attorney End-->
-
-                    <!--Attorney Start-->
-                    <div class="col-lg-4 col-sm-6 col-12 mb-30">
-                        <div class="team text-center">
-                            <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-2.jpg' %}" alt=""></a>
-                            <div class="team-content">
-                                <h3 class="name">Laura Griffin</h3>
-                                <span class="title">BANK & FINANCIAL LAWYER</span>
-                                <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
-                                <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Attorney End-->
-
-                    <!--Attorney Start-->
-                    <div class="col-lg-4 col-sm-6 col-12 mb-30">
-                        <div class="team text-center">
-                            <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-3.jpg' %}" alt=""></a>
-                            <div class="team-content">
-                                <h3 class="name">Joseph Steward</h3>
-                                <span class="title">BANK & FINANCIAL LAWYER</span>
-                                <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
-                                <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Attorney End-->
-
-                    <!--Attorney Start-->
-                    <div class="col-lg-4 col-sm-6 col-12 mb-30">
-                        <div class="team text-center">
-                            <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-4.jpg' %}" alt=""></a>
-                            <div class="team-content">
-                                <h3 class="name">Jessica Schmidt</h3>
-                                <span class="title">BANK & FINANCIAL LAWYER</span>
-                                <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
-                                <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Attorney End-->
-
-                    <!--Attorney Start-->
-                    <div class="col-lg-4 col-sm-6 col-12 mb-30">
-                        <div class="team text-center">
-                            <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-5.jpg' %}" alt=""></a>
-                            <div class="team-content">
-                                <h3 class="name">Jerry Austin</h3>
-                                <span class="title">BANK & FINANCIAL LAWYER</span>
-                                <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
-                                <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Attorney End-->
-
-                    <!--Attorney Start-->
-                    <div class="col-lg-4 col-sm-6 col-12 mb-30">
-                        <div class="team text-center">
-                            <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-6.jpg' %}" alt=""></a>
-                            <div class="team-content">
-                                <h3 class="name">Ashley Barnett</h3>
-                                <span class="title">BANK & FINANCIAL LAWYER</span>
-                                <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
-                                <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Attorney End-->
-
                 </div>
             </div>
-        </div>
-        <!--Attorneys Section End-->
+            
+            
+        {% endfor %}
+            
+
+
+                <div class="section section-padding">
+                    <div class="container">
+                        <div class="row mbn-30">
+
+                            <!--Attorney Start-->
+                            <div class="col-lg-4 col-sm-6 col-12 mb-30">
+                                <div class="team text-center">
+                                    <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-1.jpg' %}" alt=""></a>
+                                    <div class="team-content">
+                                        <h3 class="name">Kellan Dust</h3>
+                                        <span class="title">BANK & FINANCIAL LAWYER</span>
+                                        <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
+                                        <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Attorney End-->
+
+                            <!--Attorney Start-->
+                            <div class="col-lg-4 col-sm-6 col-12 mb-30">
+                                <div class="team text-center">
+                                    <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-2.jpg' %}" alt=""></a>
+                                    <div class="team-content">
+                                        <h3 class="name">Laura Griffin</h3>
+                                        <span class="title">BANK & FINANCIAL LAWYER</span>
+                                        <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
+                                        <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Attorney End-->
+
+                            <!--Attorney Start-->
+                            <div class="col-lg-4 col-sm-6 col-12 mb-30">
+                                <div class="team text-center">
+                                    <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-3.jpg' %}" alt=""></a>
+                                    <div class="team-content">
+                                        <h3 class="name">Joseph Steward</h3>
+                                        <span class="title">BANK & FINANCIAL LAWYER</span>
+                                        <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
+                                        <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Attorney End-->
+
+                            <!--Attorney Start-->
+                            <div class="col-lg-4 col-sm-6 col-12 mb-30">
+                                <div class="team text-center">
+                                    <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-4.jpg' %}" alt=""></a>
+                                    <div class="team-content">
+                                        <h3 class="name">Jessica Schmidt</h3>
+                                        <span class="title">BANK & FINANCIAL LAWYER</span>
+                                        <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
+                                        <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Attorney End-->
+
+                            <!--Attorney Start-->
+                            <div class="col-lg-4 col-sm-6 col-12 mb-30">
+                                <div class="team text-center">
+                                    <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-5.jpg' %}" alt=""></a>
+                                    <div class="team-content">
+                                        <h3 class="name">Jerry Austin</h3>
+                                        <span class="title">BANK & FINANCIAL LAWYER</span>
+                                        <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
+                                        <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Attorney End-->
+
+                            <!--Attorney Start-->
+                            <div class="col-lg-4 col-sm-6 col-12 mb-30">
+                                <div class="team text-center">
+                                    <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-6.jpg' %}" alt=""></a>
+                                    <div class="team-content">
+                                        <h3 class="name">Ashley Barnett</h3>
+                                        <span class="title">BANK & FINANCIAL LAWYER</span>
+                                        <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
+                                        <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
+                                    </div>
+                                </div>
+                            </div>
+                            <!--Attorney End-->
+
+                        </div>
+                    </div>
+                </div>
+                <!--Attorneys Section End-->
+            
+
 
         <div class="newsletter-socail-section section" data-bg-image="{% static 'assets/images/bg/newsletter-bg.png' %}">
             <div class="container">
