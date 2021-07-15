@@ -41,7 +41,6 @@ class ProductDetail(models.Model):
     below_description = models.TextField()
     
     
-    
 class Reviews(models.Model):
     review = models.TextField()
     name = models.CharField(max_length=30)
