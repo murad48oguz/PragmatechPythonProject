@@ -17,6 +17,7 @@ class Contact(models.Model):
     name = models.CharField(max_length=30)
     email= models.EmailField()
     case_details = models.TextField()
+    
 
 
 class FreeCase(models.Model):
@@ -24,6 +25,8 @@ class FreeCase(models.Model):
    email= models.EmailField()
    subject = models.CharField(max_length=30)
    case_details = models.TextField()
+   
+   
 
 class Shop(models.Model):
     stuffname = models.CharField(max_length = 40)
@@ -39,6 +42,8 @@ class ProductDetail(models.Model):
     price = models.DecimalField(max_digits=7, decimal_places=2)
     description = models.TextField()
     below_description = models.TextField()
+    
+    
     
     
 class Reviews(models.Model):

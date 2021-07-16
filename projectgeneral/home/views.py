@@ -28,9 +28,9 @@ def productdetail(request):
 
 def attorneys(request):
     attorney = Attorney.objects.all()
-    return render(request,"attorneys.html", {'attorney':attorney})
+    return render(request,"attorneys.html", {"attorney":attorney})
 
 
-def singleattorney(request):
-    singleattorney = Attorney.objects.all()
-    return render(request,"single-attorney.html",{'singleattorney': singleattorney})
+def singleattorney(request,id):
+    singleattorney =  Attorney.objects.get(id=id).first()
+    return render(request,"single-attorney.html",{"singleattorney": singleattorney})
