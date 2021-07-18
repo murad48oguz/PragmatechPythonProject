@@ -1,6 +1,7 @@
-{% extends "base.html"%}
+{% extends "base.html" %}
 {% block body %} 
 {% load static %}
+
 
     <div class="main-wrapper">
 
@@ -17,7 +18,7 @@
                         <div class="header-top-left">
                             <div class="header-top-left-info">
                                 <p><i class="fa fa-envelope-o"></i><a href="mailto:ebulzade@inbox.ru">Send mail to me</a></p>
-                                <p><i class="fa fa-phone"></i><a href="#">070-852-74-90</a></p>
+                                <p><i class="fa fa-phone"></i><a href="#">1.800.123.4569</a></p>
                             </div>
                         </div>
                     </div>
@@ -85,11 +86,8 @@
                         <div class="primary-menu">
                             <nav>
                                 <ul>
-                                    <li class="menu-item-has-children"><a href="{% url 'home' %}">Home</a>
-                                        <ul class="sub-menu">
-                                            <li><a href="http://localhost:8000">Homepage 01</a></li>
-                                            
-                                        </ul>
+                                    <li class="menu-item-has-children"><a href="http://localhost:8000">Home</a>
+                                       
                                     </li>
                                     
                                    
@@ -137,7 +135,7 @@
     <!--Header Section End-->
 
 
-        
+      
 
         <!--Offcanvas Section Start-->
         <div id="offcanvas" class="offcanvas-section">
@@ -148,10 +146,13 @@
                     <div class="offcanvas-menu">
                         <nav>
                             <ul>
-                                <li class="menu-item-has-children"><a href="http://localhost:8000/">Home</a>
+                                <li class="menu-item-has-children"><a href="index.html">Home</a>
                                     <ul class="sub-menu">
-                                        
-                                        
+                                        <li><a href="index.html">Homepage 01</a></li>
+                                        <li><a href="index-2.html">Homepage 02</a></li>
+                                        <li><a href="index-3.html">Homepage 03</a></li>
+                                        <li><a href="index-4.html">Homepage 04</a></li>
+                                        <li><a href="index-5.html">Homepage 05</a></li>
                                     </ul>
                                 </li>
                                 <li class="menu-item-has-children"><a href="practice-areas-1.html">Practice Areas</a>
@@ -173,7 +174,7 @@
                                 <li class="menu-item-has-children"><a href="#">Our Firm</a>
                                     <ul class="sub-menu">
                                         <li><a href="http://localhost:8000/attorneys">Attorneys</a></li>
-                                        <li><a href="{% url 'singleattorney' singleattorney.id %}">Single Attorney</a></li>
+                                        <li><a href="single-attorney.html">Single Attorney</a></li>
                                         <li><a href="honnors-and-awards.html">Honnors And Awards</a></li>
                                         <li><a href="careers.html">Careers</a></li>
                                     </ul>
@@ -185,9 +186,9 @@
                                         <li><a href="news-details.html">News Details</a></li>
                                     </ul>
                                 </li>
-                                <li class="menu-item-has-children"><a href="http://localhost:8000/shop">Shop</a>
+                                <li class="menu-item-has-children"><a href="shop.html">Shop</a>
                                     <ul class="sub-menu">
-                                        <li><a href="http://localhost:8000/shop.html">Shop</a></li>
+                                        <li><a href="shop.html">Shop</a></li>
                                         <li><a href="shop-2-column.html">Shop 2 Column</a></li>
                                         <li><a href="product-details.html">Product Details</a></li>
                                         <li><a href="cart.html">Shopping Cart</a></li>
@@ -199,10 +200,10 @@
                                 </li>
                                 <li class="menu-item-has-children"><a href="#">Pages</a>
                                     <ul class="sub-menu">
-                                        <li><a href="http://localhost:8000/about">About us</a></li>
+                                        <li><a href="about-us.html">About us</a></li>
                                         <li><a href="contact-us-1.html">Contact us 1</a></li>
                                         <li><a href="contact-us-2.html">Contact us 2</a></li>
-                                        <li><a href="http://localhost:8000/faq">F.A.Q</a></li>
+                                        <li><a href="faq.html">F.A.Q</a></li>
                                         <li><a href="gallery.html">Gallery</a></li>
                                     </ul>
                                 </li>
@@ -246,13 +247,15 @@
             <div class="container">
 
                 <!--Page Title Container Start-->
+                {% for attorney in singleattorney %}
                 <div class="page-title-container">
                     <div class="inner">
 
-                        <h1 class="page-title">Attorneys</h1>
+                        <h1 class="page-title">{{attorney.name}} {{attorney.surname}}</h1>
                         <ul class="page-breadcrumb">
                             <li><a href="http://localhost:8000/">Home</a></li>
-                            <li>Attorneys</li>
+                            <li><a href="http://localhost:8000/attorneys">Attorneys</a></li>
+                            <li>{{attorney.name}} {{attorney.surname}}</li>
                         </ul>
 
                     </div>
@@ -262,122 +265,127 @@
             </div>
         </div><!-- Page Banner Section End -->
 
-        <!--Attorneys Section Start-->
-       
+        <!--Single Attorney(Team) Section Start-->
         
-                <div class="section section-padding">
-                    <div class="container">
-                        <div class="row mbn-30">
+        <div class="section">
+            <div class="row no-gutters">
 
-                            <!--Attorney Start-->
-                            {% for attorney in attorney %}
+                <!--Team Image Start-->
+                <div class="single-team-image col-lg-6 col-12">
+                    <img src="{{ attorney.image.url }}" alt="">
+                </div>
+                <!--Team Image End-->
 
-                                <div class="col-lg-4 col-sm-6 col-12 mb-30">
-                                    <div class="team text-center">
-                                        <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{{ attorney.image.url }}" alt=""></a>
-                                        <div class="team-content">
-                                            <h3 class="name">{{attorney.name}} {{attorney.surname}}</h3>
-                                            <span class="title">{{attorney.absolutejob}}</span>
-                                            <p class="desc">{{attorney.biography}}</p>
-                                            <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
-                                        </div>
-                                    </div>
-                                </div>
-
-                            {% endfor %}
-
-                            
-                            <div class="col-lg-4 col-sm-6 col-12 mb-30">
-                                <div class="team text-center">
-                                    <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-1.jpg' %}" alt=""></a>
-                                    <div class="team-content">
-                                        <h3 class="name">Kellan Dust</h3>
-                                        <span class="title">BANK & FINANCIAL LAWYER</span>
-                                        <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
-                                        <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Attorney End-->
-
-                            <!--Attorney Start-->
-                            <div class="col-lg-4 col-sm-6 col-12 mb-30">
-                                <div class="team text-center">
-                                    <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-2.jpg' %}" alt=""></a>
-                                    <div class="team-content">
-                                        <h3 class="name">Laura Griffin</h3>
-                                        <span class="title">BANK & FINANCIAL LAWYER</span>
-                                        <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
-                                        <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Attorney End-->
-
-                            <!--Attorney Start-->
-                            <div class="col-lg-4 col-sm-6 col-12 mb-30">
-                                <div class="team text-center">
-                                    <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-3.jpg' %}" alt=""></a>
-                                    <div class="team-content">
-                                        <h3 class="name">Joseph Steward</h3>
-                                        <span class="title">BANK & FINANCIAL LAWYER</span>
-                                        <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
-                                        <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Attorney End-->
-
-                            <!--Attorney Start-->
-                            <div class="col-lg-4 col-sm-6 col-12 mb-30">
-                                <div class="team text-center">
-                                    <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-4.jpg' %}" alt=""></a>
-                                    <div class="team-content">
-                                        <h3 class="name">Jessica Schmidt</h3>
-                                        <span class="title">BANK & FINANCIAL LAWYER</span>
-                                        <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
-                                        <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Attorney End-->
-
-                            <!--Attorney Start-->
-                            <div class="col-lg-4 col-sm-6 col-12 mb-30">
-                                <div class="team text-center">
-                                    <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-5.jpg' %}" alt=""></a>
-                                    <div class="team-content">
-                                        <h3 class="name">Jerry Austin</h3>
-                                        <span class="title">BANK & FINANCIAL LAWYER</span>
-                                        <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
-                                        <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Attorney End-->
-
-                            <!--Attorney Start-->
-                            <div class="col-lg-4 col-sm-6 col-12 mb-30">
-                                <div class="team text-center">
-                                    <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-6.jpg' %}" alt=""></a>
-                                    <div class="team-content">
-                                        <h3 class="name">Ashley Barnett</h3>
-                                        <span class="title">BANK & FINANCIAL LAWYER</span>
-                                        <p class="desc">Biography Cras justo odio, dapibus ac facilisis in, egestas eget quam. Praesent commodo cursus magna.</p>
-                                        <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <!--Attorney End-->
-
-                        </div>
+                <!--Team Content Start-->
+                <div class="single-team-content col-lg-6 col-12">
+                    <h1 class="name">{{attorney.name}} {{attorney.surname}}</h1>
+                    <span class="title">{{attorney.absolutejob}}</span>
+                    <div class="desc">
+                        <p>{{attorney.biography}}</p>
+                    </div>
+                    <div class="single-team-socail">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-instagram"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#"><i class="fa fa-vimeo"></i></a>
+                    </div>
+                    <div class="single-team-contact">
+                        <h4 class="widget-title">Contact Me</h4>
+                        <ul>
+                            <li><i class="fa fa-phone"></i> 1.800.123.4569</li>
+                            <li><i class="fa fa-envelope-o"></i> contact@yoursite.com</li>
+                        </ul>
                     </div>
                 </div>
-                <!--Attorneys Section End-->
-            
+                <!--Team Content End-->
 
+            </div>
+        </div>
+        {% endfor %}
+        <!--Single Attorney(Team) Section End-->
 
-        <div class="newsletter-socail-section section" data-bg-image="{% static 'assets/images/bg/newsletter-bg.png' %}">
+     
+
+        <!--Single Attorney(Team) Skill Section Start-->
+        <div class="single-team-skill-section section section-padding">
+            <div class="container">
+                <div class="row">
+
+                    <!--Section Title Start-->
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h2 class="title">MY STATISTIC</h2>
+                        </div>
+                    </div>
+                    <!--Section Title End-->
+
+                    <!--Skill Wrap Start-->
+                    <div class="col-12">
+
+                        <!--Skill Start-->
+                        <div class="skill">
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 90%;"></div>
+                            </div>
+                            <div class="text">Development <span class="value">90%</span></div>
+                        </div>
+                        <!--Skill End-->
+
+                        <!--Skill Start-->
+                        <div class="skill">
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 100%;"></div>
+                            </div>
+                            <div class="text">Banking & Financial <span class="value">100%</span></div>
+                        </div>
+                        <!--Skill End-->
+
+                        <!--Skill Start-->
+                        <div class="skill">
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 75%;"></div>
+                            </div>
+                            <div class="text">Family Law <span class="value">75%</span></div>
+                        </div>
+                        <!--Skill End-->
+
+                        <!--Skill Start-->
+                        <div class="skill">
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 100%;"></div>
+                            </div>
+                            <div class="text">Real Estate <span class="value">100%</span></div>
+                        </div>
+                        <!--Skill End-->
+
+                        <!--Skill Start-->
+                        <div class="skill">
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 80%;"></div>
+                            </div>
+                            <div class="text">Marketing <span class="value">80%</span></div>
+                        </div>
+                        <!--Skill End-->
+
+                        <!--Skill Start-->
+                        <div class="skill">
+                            <div class="progress">
+                                <div class="progress-bar" style="width: 100%;"></div>
+                            </div>
+                            <div class="text">Sale <span class="value">100%</span></div>
+                        </div>
+                        <!--Skill End-->
+
+                    </div>
+                    <!--Skill Wrap End-->
+
+                </div>
+            </div>
+        </div>
+        <!--Single Attorney(Team) Skill Section End-->
+
+        <div class="newsletter-socail-section section" data-bg-image="assets/images/bg/newsletter-bg.png">
             <div class="container">
                 <div class="row justify-content-between align-items-center mbn-30">
 
@@ -437,10 +445,10 @@
                         <ul class="footer-widget-link">
                             <li><a href="practice-areas-1.html">Practice Areas</a></li>
                             <li><a href="case-results.html">Case Results</a></li>
-                            <li><a href="http://localhost:8000/about">Our Firm</a></li>
+                            <li><a href="about-us.html">Our Firm</a></li>
                             <li><a href="careers.html">Careers</a></li>
-                            <li><a href="http://localhost:8000/faq">F.A.Q</a></li>
-                            <li><a href="http://localhost:8000/contact">Contact Us</a></li>
+                            <li><a href="faq.html">F.A.Q</a></li>
+                            <li><a href="contact-us-1.html">Contact Us</a></li>
                         </ul>
                     </div>
                     <!--Footer Widget End-->
@@ -502,5 +510,4 @@
 
     </div>
 
-
-{% endblock %}
+ {% endblock %}

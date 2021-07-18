@@ -31,6 +31,6 @@ def attorneys(request):
     return render(request,"attorneys.html", {"attorney":attorney})
 
 
-def singleattorney(request,id):
-    singleattorney =  Attorney.objects.get(id=id).first()
+def singleattorney(request):
+    singleattorney =  Attorney.objects.all()
     return render(request,"single-attorney.html",{"singleattorney": singleattorney})
