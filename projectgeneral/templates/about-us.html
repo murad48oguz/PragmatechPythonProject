@@ -32,7 +32,7 @@
                         <div class="col-lg-6">
                             <div class="header-top-right">
                                 <p class="header-top-right-text">Add an interesting message for your visitors</p>
-                                <a href="{% url ' home:cart' %}" class="header-top-right-cart">
+                                <a href="{% url 'cart' %}" class="header-top-right-cart">
                                     <i class="ion-bag" data-count="2"></i> $43.00
                                 </a>
                             </div>
@@ -139,35 +139,7 @@
         <!--Header Section End-->
 
 
-        <!--Mobile Header Section Start-->
-        <div class="mobile-header d-block d-lg-none">
-            <div class="container">
-                <div class="row">
-
-                    <!--Left Start-->
-                    <div class="col d-flex align-items-center">
-                        <div class="header-logo mobile-header-logo">
-                            <a href="{% url 'home' %}"><img src="{% static 'assets/images/logo/logo_1.png' %}" alt="Lawyer Attorneys"></a>
-                        </div>
-                    </div>
-                    <!--Left End-->
-
-                    <!--Right Start-->
-                    <div class="col-auto d-flex align-items-center">
-                        <a href="{% url 'cart' %}" class="mobile-header-cart">
-                            <i class="ion-bag" data-count="2"></i>
-                        </a>
-                        <div class="mobile-header-right-toggles">
-                            <button class="header-search-toggle" data-target="#fullscreen-search-overlay"><i class="fa fa-search"></i></button>
-                            <button class="mobile-menu-toggle"><i class="ion-navicon"></i></button>
-                        </div>
-                    </div>
-                    <!--Right End-->
-
-                </div>
-            </div>
-        </div>
-        <!--Mobile Header Section End-->
+        
 
 
         <!--Offcanvas Section Start-->
@@ -207,7 +179,7 @@
                                 <li class="menu-item-has-children"><a href="#">Our Firm</a>
                                     <ul class="sub-menu">
                                         <li><a href="{% url 'attorneys' %}">Attorneys</a></li>
-                                        <li><a href="{% url 'singleattorney' %}">Single Attorney</a></li>
+                                        <li><a href="single-attorney.html">Single Attorney</a></li>
                                         <li><a href="honnors-and-awards.html">Honnors And Awards</a></li>
                                         <li><a href="careers.html">Careers</a></li>
                                     </ul>
@@ -219,12 +191,12 @@
                                         <li><a href="news-details.html">News Details</a></li>
                                     </ul>
                                 </li>
-                                <li class="menu-item-has-children"><a href="{% url 'shop' %}">Shop</a>
+                                <li class="menu-item-has-children"><a href="shop.html">Shop</a>
                                     <ul class="sub-menu">
-                                        <li><a href={% url 'shop' %}">Shop</a></li>
+                                        <li><a href="{% url 'shop' %}">Shop</a></li>
                                         <li><a href="shop-2-column.html">Shop 2 Column</a></li>
-                                        <li><a href="http://127.0.0.1:8000/productdetail">Product Details</a></li>
-                                        <li><a href="http://127.0.0.1:8000/cart">Shopping Cart</a></li>
+                                        <li><a href="{% url 'productdetail' %}">Product Details</a></li>
+                                        <li><a href="{% url 'cart' %}">Shopping Cart</a></li>
                                         <li><a href="checkout.html">Checkout</a></li>
                                         <li><a href="login-register.html">Login & Register</a></li>
                                         <li><a href="my-account.html">My Account</a></li>
@@ -285,7 +257,7 @@
 
                         <h1 class="page-title">About us</h1>
                         <ul class="page-breadcrumb">
-                            <li><a href="{% url 'home' %}>Home</a></li>
+                            <li><a href="{% url 'home' %}">Home</a></li>
                             <li>About us</li>
                         </ul>
 
@@ -558,7 +530,7 @@
                             <div class="team-content">
                                 <h3 class="name">Kellan Dust</h3>
                                 <span class="title">BANK & FINANCIAL LAWYER</span>
-                                <a href="{% url 'singleattorney' %}" class="read-more">Read Profile</a>
+                                <a href="{% url 'singleattorney' %}l" class="read-more">Read Profile</a>
                             </div>
                         </div>
                     </div>
