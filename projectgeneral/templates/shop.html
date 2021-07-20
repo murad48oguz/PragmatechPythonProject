@@ -2,137 +2,134 @@
 {% block body %} 
 {% load static %}
 
-    <div class="main-wrapper">
+     <!--Header Section Start-->
+     <div class="header-section d-none d-lg-block">
 
-         <!--Header Section Start-->
-         <div class="header-section d-none d-lg-block">
-
-            <!--Header Top Start-->
-            <div class="header-top">
-                <div class="container">
-                    <div class="row">
-
-                        <!--Left Start-->
-                        <div class="col-lg-6">
-                            <div class="header-top-left">
-                                <div class="header-top-left-info">
-                                    <p><i class="fa fa-envelope-o"></i><a href="mailto:ebulzade@inbox.ru">Send mail to me</a></p>
-                                    <p><i class="fa fa-phone"></i><a href="#">1.800.123.4569</a></p>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Left End-->
-
-                        <!--Right Start-->
-                        <div class="col-lg-6">
-                            <div class="header-top-right">
-                                <p class="header-top-right-text">Add an interesting message for your visitors</p>
-                                <a href="http://localhost:8000/cart" class="header-top-right-cart">
-                                    <i class="ion-bag" data-count="2"></i> $43.00
-                                </a>
-                            </div>
-                        </div>
-                        <!--Right End-->
-
-                    </div>
-                </div>
-            </div>
-            <!--Header Top End-->
-
-            <!--Header Middle Start-->
-            <div class="header-middle">
-                <div class="row no-gutters">
+        <!--Header Top Start-->
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
 
                     <!--Left Start-->
-                    <div class="header-middle-left col-auto">
-                        <div class="header-middle-social">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-google-plus"></i></a>
-                            <a href="#"><i class="fa fa-twitter"></i></a>
-                            <a href="#"><i class="fa fa-youtube-play"></i></a>
-                            <a href="#"><i class="fa fa-vimeo"></i></a>
+                    <div class="col-lg-6">
+                        <div class="header-top-left">
+                            <div class="header-top-left-info">
+                                <p><i class="fa fa-envelope-o"></i><a href="mailto:contact@yoursite.com">contact@yoursite.com</a></p>
+                                <p><i class="fa fa-phone"></i><a href="#">1.800.123.4569</a></p>
+                            </div>
                         </div>
                     </div>
                     <!--Left End-->
 
-                    <!--Center Start-->
-                    <div class="header-middle-center col">
-                        <div class="header-logo">
-                            <a href="http://localhost:8000"><img src="{% static 'assets/images/logo/logo_1.png' %}" alt="Lawyer Attorneys"></a>
-                        </div>
-                    </div>
-                    <!--Center End-->
-
                     <!--Right Start-->
-                    <div class="header-middle-right col-auto">
-                        <div class="header-middle-free-case">
-                            <a href="http://localhost:8000/contact"><i class="pe-7s-culture"></i>FREE CASE EVALUATION</a>
+                    <div class="col-lg-6">
+                        <div class="header-top-right">
+                            <p class="header-top-right-text">Add an interesting message for your visitors</p>
+                            <a href="{% url 'cart' %}" class="header-top-right-cart">
+                                <i class="ion-bag" data-count="2"></i> $43.00
+                            </a>
                         </div>
                     </div>
                     <!--Right End-->
 
                 </div>
             </div>
-            <!--Header Middle End-->
+        </div>
+        <!--Header Top End-->
 
-            <!--Header Bottom Start-->
-            <div class="header-bottom">
-                <div class="container">
-                    <div class="row">
+        <!--Header Middle Start-->
+        <div class="header-middle">
+            <div class="row no-gutters">
 
-                        <!--Left Start-->
-                        <div class="col">
-                            <div class="primary-menu">
-                                <nav>
-                                    <ul>
-                                        <li class="menu-item-has-children"><a href="http://localhost:8000">Home</a>
-                                           
-                                        </li>
-                                        
-                                       
-                                        <li class="menu-item-has-children"><a href="#">Our Firm</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="http://localhost:8000/attorneys">Attorneys</a></li>
-                                                
-                                            </ul>
-                                        </li>
-                                        
-                                        <li class="menu-item-has-children"><a href="http://localhost:8000/shop">Shop</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="http://localhost:8000/shop">Shop</a></li>
-                                                <li><a href="http://localhost:8000/productdetail">Product Details</a></li>
-                                                <li><a href="http://localhost:8000/cart">Shopping Cart</a></li>
-                                                
-                                            </ul>
-                                        </li>
-                                        <li class="menu-item-has-children"><a href="#">Pages</a>
-                                            <ul class="sub-menu">
-                                                <li><a href="http://localhost:8000/about">About us</a></li>
-                                                <li><a href="http://localhost:8000/contact">Contact us 1</a></li>
-                                                <li><a href="http://localhost:8000/faq">F.A.Q</a></li>
-                                                
-                                            </ul>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </div>
-                        <!--Left End-->
-
-                        <!--Right Start-->
-                        <div class="col-auto">
-                            <button class="header-bottom-search-toggle header-search-toggle" data-target="#fullscreen-search-overlay"><i class="fa fa-search"></i></button>
-                        </div>
-                        <!--Right End-->
-
+                <!--Left Start-->
+                <div class="header-middle-left col-auto">
+                    <div class="header-middle-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#"><i class="fa fa-vimeo"></i></a>
                     </div>
                 </div>
+                <!--Left End-->
+
+                <!--Center Start-->
+                <div class="header-middle-center col">
+                    <div class="header-logo">
+                        <a href="{% url 'home' %}"><img src="{% static 'assets/images/logo/logo_1.png' %}" alt="Lawyer Attorneys"></a>
+                    </div>
+                </div>
+                <!--Center End-->
+
+                <!--Right Start-->
+                <div class="header-middle-right col-auto">
+                    <div class="header-middle-free-case">
+                        <a href="{% url 'contact' %}"><i class="pe-7s-culture"></i>FREE CASE EVALUATION</a>
+                    </div>
+                </div>
+                <!--Right End-->
+
             </div>
-            <!--Header Bottom End-->
-
         </div>
-        <!--Header Section End-->
+        <!--Header Middle End-->
 
+        <!--Header Bottom Start-->
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row">
+
+                    <!--Left Start-->
+                    <div class="col">
+                        <div class="primary-menu">
+                            <nav>
+                                <ul>
+                                    <li class="menu-item-has-children"><a href="{% url 'home' %}">Home</a>
+                                        
+                                    </li>
+                                    
+                                   
+                                    <li class="menu-item-has-children"><a href="#">Our Firm</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'attorneys' %}">Attorneys</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="menu-item-has-children"><a href="{% url 'shop' %}">Shop</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'shop' %}">Shop</a></li>
+                                            <li><a href="{% url 'productdetail' %}">Product Details</a></li>
+                                            <li><a href="{% url 'cart' %}">Shopping Cart</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="#">Pages</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'about' %}">About us</a></li>
+                                            <li><a href="{% url 'contact' %}">Contact us 1</a></li>
+                                            <li><a href="{% url 'faq' %}">F.A.Q</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--Left End-->
+
+                    <!--Right Start-->
+                    <div class="col-auto">
+                        <button class="header-bottom-search-toggle header-search-toggle" data-target="#fullscreen-search-overlay"><i class="fa fa-search"></i></button>
+                    </div>
+                    <!--Right End-->
+
+                </div>
+            </div>
+        </div>
+        <!--Header Bottom End-->
+
+    </div>
+    <!--Header Section End-->
 
        
 
@@ -145,9 +142,9 @@
                     <div class="offcanvas-menu">
                         <nav>
                             <ul>
-                                <li class="menu-item-has-children"><a href="http://localhost:8000">Home</a>
+                                <li class="menu-item-has-children"><a href="{% url 'home' %}">Home</a>
                                     <ul class="sub-menu">
-                                        <li><a href="http://localhost:8000/">Homepage 01</a></li>
+                                        <li><a href="{% url 'home' %}">Homepage 01</a></li>
                                         <li><a href="index-2.html">Homepage 02</a></li>
                                         <li><a href="index-3.html">Homepage 03</a></li>
                                         <li><a href="index-4.html">Homepage 04</a></li>
@@ -172,8 +169,8 @@
                                 <li><a href="case-results.html">Case Results</a></li>
                                 <li class="menu-item-has-children"><a href="#">Our Firm</a>
                                     <ul class="sub-menu">
-                                        <li><a href="http://localhost:8000/attorneys">Attorneys</a></li>
-                                        <li><a href="http://localhost:8000/singleattorney">Single Attorney</a></li>
+                                        <li><a href="{% url 'attorneys' %}">Attorneys</a></li>
+                                        <li><a href="{% url 'singleattorney' %}">Single Attorney</a></li>
                                         <li><a href="honnors-and-awards.html">Honnors And Awards</a></li>
                                         <li><a href="careers.html">Careers</a></li>
                                     </ul>
@@ -185,12 +182,12 @@
                                         <li><a href="news-details.html">News Details</a></li>
                                     </ul>
                                 </li>
-                                <li class="menu-item-has-children"><a href="http://localhost:8000/shop">Shop</a>
+                                <li class="menu-item-has-children"><a href="{% url 'shop' %}">Shop</a>
                                     <ul class="sub-menu">
-                                        <li><a href="http://localhost:8000/shop.html">Shop</a></li>
+                                        <li><a href="{% url 'shop' %}">Shop</a></li>
                                         <li><a href="shop-2-column.html">Shop 2 Column</a></li>
-                                        <li><a href="http://127.0.0.1:8000/productdetail">Product Details</a></li>
-                                        <li><a href="http://127.0.0.1:8000/cart">Shopping Cart</a></li>
+                                        <li><a href="{% url 'productdetail' %}">Product Details</a></li>
+                                        <li><a href="{% url 'cart' %}">Shopping Cart</a></li>
                                         <li><a href="checkout.html">Checkout</a></li>
                                         <li><a href="login-register.html">Login & Register</a></li>
                                         <li><a href="my-account.html">My Account</a></li>
@@ -199,10 +196,10 @@
                                 </li>
                                 <li class="menu-item-has-children"><a href="#">Pages</a>
                                     <ul class="sub-menu">
-                                        <li><a href="http://localhost:8000/about">About us</a></li>
-                                        <li><a href="http://127.0.0.1:8000/contact">Contact us 1</a></li>
+                                        <li><a href="{% url 'about' %}">About us</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact us 1</a></li>
                                         <li><a href="contact-us-2.html">Contact us 2</a></li>
-                                        <li><a href="http://localhost:8000/faq">F.A.Q</a></li>
+                                        <li><a href="{% url 'faq' %}">F.A.Q</a></li>
                                         <li><a href="gallery.html">Gallery</a></li>
                                     </ul>
                                 </li>
@@ -251,7 +248,7 @@
 
                         <h1 class="page-title">Shop Full Width</h1>
                         <ul class="page-breadcrumb">
-                            <li><a href="http://localhost:8000/">Home</a></li>
+                            <li><a href="{% url 'home' %}">Home</a></li>
                             <li>Shop Full Width</li>
                         </ul>
 
@@ -303,11 +300,11 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="http://127.0.0.1:8000/productdetail" class="image"><img src="{% static 'assets/images/products/product-1.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-1.jpg' %}" alt=""></a>
                                             <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="http://127.0.0.1:8000/productdetail">Album</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">Album</a></h4>
                                             <span class="prices">
 											<span class="price-new">$15.00</span>
                                             </span>
@@ -325,14 +322,14 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="home/productdetail" class="image"><img src="{% static 'assets/images/products/product-2.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-2.jpg' %}" alt=""></a>
                                             <span class="labels">
 											<span class="label label-sale">sale</span>
                                             </span>
                                             <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="home/productdetail">Beanie</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">Beanie</a></h4>
                                             <span class="prices">
 											<span class="price-old">$20.00</span>
                                             <span class="price-new">$18.00</span>
@@ -351,14 +348,14 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-3.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-3.jpg' %}" alt=""></a>
                                             <span class="labels">
 											<span class="label label-sale">sale</span>
                                             </span>
                                             <a href="#" class="wishlist active"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="product-details.html">Beanie with Logo</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">Beanie with Logo</a></h4>
                                             <span class="prices">
 											<span class="price-old">$20.00</span>
                                             <span class="price-new">$18.00</span>
@@ -377,14 +374,14 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-4.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-4.jpg' %}" alt=""></a>
                                             <span class="labels">
 											<span class="label label-sale">sale</span>
                                             </span>
                                             <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="product-details.html">Belt</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">Belt</a></h4>
                                             <span class="prices">
 											<span class="price-old">$65.00</span>
                                             <span class="price-new">$55.00</span>
@@ -403,7 +400,7 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-5.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-5.jpg' %}" alt=""></a>
                                             <span class="labels">
 											<span class="label label-hot">hot</span>
                                             <span class="label label-sale">sale</span>
@@ -411,7 +408,7 @@
                                             <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="product-details.html">Cap</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">Cap</a></h4>
                                             <span class="prices">
 											<span class="price-old">$18.00</span>
                                             <span class="price-new">$16.00</span>
@@ -430,14 +427,14 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-6.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-6.jpg' %}" alt=""></a>
                                             <span class="labels">
 											<span class="label label-sale">sale</span>
                                             </span>
                                             <a href="#" class="wishlist active"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="product-details.html">Hoodie</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">Hoodie</a></h4>
                                             <span class="prices">
 											<span class="price-new">$42.00 - $45.00</span>
                                             </span>
@@ -455,11 +452,11 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-7.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-7.jpg' %}" alt=""></a>
                                             <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="product-details.html">Hoodie with Logo</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">Hoodie with Logo</a></h4>
                                             <span class="prices">
 											<span class="price-new">$45.00</span>
                                             </span>
@@ -477,14 +474,14 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-8.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-8.jpg' %}" alt=""></a>
                                             <span class="labels">
 											<span class="label label-hot">hot</span>
                                             </span>
                                             <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="product-details.html">Hoodie with Zipper</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">Hoodie with Zipper</a></h4>
                                             <span class="prices">
 											<span class="price-new">$45.00</span>
                                             </span>
@@ -502,14 +499,14 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-9.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-9.jpg' %}" alt=""></a>
                                             <span class="labels">
 											<span class="label label-sale">sale</span>
                                             </span>
                                             <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="product-details.html">Logo Collection</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">Logo Collection</a></h4>
                                             <span class="prices">
 											<span class="price-new">$18.00 - $45.00</span>
                                             </span>
@@ -527,11 +524,11 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-10.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-10.jpg' %}" alt=""></a>
                                             <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="product-details.html">Long Sleeve Tee</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">Long Sleeve Tee</a></h4>
                                             <span class="prices">
 											<span class="price-new">$25.00</span>
                                             </span>
@@ -549,11 +546,11 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-11.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-11.jpg' %}" alt=""></a>
                                             <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="product-details.html">Polo</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">Polo</a></h4>
                                             <span class="prices">
 											<span class="price-new">$20.00</span>
                                             </span>
@@ -571,14 +568,14 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-12.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-12.jpg' %}" alt=""></a>
                                             <span class="labels">
 											<span class="label label-sale">sale</span>
                                             </span>
                                             <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="product-details.html">Single</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">Single</a></h4>
                                             <span class="prices">
 											<span class="price-old">$3.00</span>
                                             <span class="price-new">$2.00</span>
@@ -597,14 +594,14 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="product-details.html" class="image"><img src="{% static 'assets/images/products/product-13.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-13.jpg' %}" alt=""></a>
                                             <span class="labels">
 											<span class="label label-hot">hot</span>
                                             </span>
                                             <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="product-details.html">Sunglasses</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">Sunglasses</a></h4>
                                             <span class="prices">
 											<span class="price-new">$90.00</span>
                                             </span>
@@ -622,11 +619,11 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="http://127.0.0.1:8000/productdetail" class="image"><img src="{% static 'assets/images/products/product-14.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-14.jpg' %}" alt=""></a>
                                             <a href="#" class="wishlist active"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="http://127.0.0.1:8000/productdetail">T-Shirt</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">T-Shirt</a></h4>
                                             <span class="prices">
 											<span class="price-new">$18.00</span>
                                             </span>
@@ -644,11 +641,11 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="http://127.0.0.1:8000/productdetail" class="image"><img src="{% static 'assets/images/products/product-15.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-15.jpg' %}" alt=""></a>
                                             <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="http://127.0.0.1:8000/productdetail">T-Shirt with Logo</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">T-Shirt with Logo</a></h4>
                                             <span class="prices">
 											<span class="price-new">$18.00</span>
                                             </span>
@@ -666,14 +663,14 @@
                                     <div class="inner">
 
                                         <div class="media">
-                                            <a href="http://127.0.0.1:8000/productdetail" class="image"><img src="{% static 'assets/images/products/product-4.jpg' %}" alt=""></a>
+                                            <a href="{% url 'productdetail' %}" class="image"><img src="{% static 'assets/images/products/product-4.jpg' %}" alt=""></a>
                                             <span class="labels">
 											<span class="label label-hot">hot</span>
                                             </span>
                                             <a href="#" class="wishlist"><i class="default ion-android-favorite-outline"></i><i class="added ion-android-favorite"></i></a>
                                         </div>
                                         <div class="content">
-                                            <h4 class="title"><a href="http://127.0.0.1:8000/ productdetail">V-Neck T-Shirt</a></h4>
+                                            <h4 class="title"><a href="{% url 'productdetail' %}">V-Neck T-Shirt</a></h4>
                                             <span class="prices">
 											<span class="price-new">$15.00 - $20.00</span>
                                             </span>
@@ -775,10 +772,10 @@
                         <ul class="footer-widget-link">
                             <li><a href="practice-areas-1.html">Practice Areas</a></li>
                             <li><a href="case-results.html">Case Results</a></li>
-                            <li><a href="about-us.html">Our Firm</a></li>
+                            <li><a href="{% url 'about' %}">Our Firm</a></li>
                             <li><a href="careers.html">Careers</a></li>
-                            <li><a href="faq.html">F.A.Q</a></li>
-                            <li><a href="contact-us-1.html">Contact Us</a></li>
+                            <li><a href="{% url 'faq' %}">F.A.Q</a></li>
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
                         </ul>
                     </div>
                     <!--Footer Widget End-->

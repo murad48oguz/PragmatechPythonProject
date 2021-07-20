@@ -3,135 +3,136 @@
 {% load static %}
 
 
-    <div class="main-wrapper">
- <!--Header Section Start-->
- <div class="header-section d-none d-lg-block">
+<div class="main-wrapper">
 
-    <!--Header Top Start-->
-    <div class="header-top">
-        <div class="container">
-            <div class="row">
+    <!--Header Section Start-->
+    <div class="header-section d-none d-lg-block">
 
-                <!--Left Start-->
-                <div class="col-lg-6">
-                    <div class="header-top-left">
-                        <div class="header-top-left-info">
-                            <p><i class="fa fa-envelope-o"></i><a href="mailto:contact@yoursite.com">contact@yoursite.com</a></p>
-                            <p><i class="fa fa-phone"></i><a href="#">1.800.123.4569</a></p>
+        <!--Header Top Start-->
+        <div class="header-top">
+            <div class="container">
+                <div class="row">
+
+                    <!--Left Start-->
+                    <div class="col-lg-6">
+                        <div class="header-top-left">
+                            <div class="header-top-left-info">
+                                <p><i class="fa fa-envelope-o"></i><a href="mailto:contact@yoursite.com">ebulzade@inbox.ru</a></p>
+                                <p><i class="fa fa-phone"></i><a href="#">070-852-74-90</a></p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <!--Left End-->
+                    <!--Left End-->
 
-                <!--Right Start-->
-                <div class="col-lg-6">
-                    <div class="header-top-right">
-                        <p class="header-top-right-text">Add an interesting message for your visitors</p>
-                        <a href="http://localhost:8000/cart" class="header-top-right-cart">
-                            <i class="ion-bag" data-count="2"></i> $43.00
-                        </a>
+                    <!--Right Start-->
+                    <div class="col-lg-6">
+                        <div class="header-top-right">
+                            <p class="header-top-right-text">Add an interesting message for your visitors</p>
+                            <a href="{% url 'cart' %}" class="header-top-right-cart">
+                                <i class="ion-bag" data-count="2"></i> $43.00
+                            </a>
+                        </div>
                     </div>
-                </div>
-                <!--Right End-->
+                    <!--Right End-->
 
+                </div>
             </div>
         </div>
-    </div>
-    <!--Header Top End-->
+        <!--Header Top End-->
 
-    <!--Header Middle Start-->
-    <div class="header-middle">
-        <div class="row no-gutters">
-
-            <!--Left Start-->
-            <div class="header-middle-left col-auto">
-                <div class="header-middle-social">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-google-plus"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-youtube-play"></i></a>
-                    <a href="#"><i class="fa fa-vimeo"></i></a>
-                </div>
-            </div>
-            <!--Left End-->
-
-            <!--Center Start-->
-            <div class="header-middle-center col">
-                <div class="header-logo">
-                    <a href="http://localhost:8000"><img src="{% static 'assets/images/logo/logo_1.png' %}" alt="Lawyer Attorneys"></a>
-                </div>
-            </div>
-            <!--Center End-->
-
-            <!--Right Start-->
-            <div class="header-middle-right col-auto">
-                <div class="header-middle-free-case">
-                    <a href="http://localhost:8000/contact"><i class="pe-7s-culture"></i>FREE CASE EVALUATION</a>
-                </div>
-            </div>
-            <!--Right End-->
-
-        </div>
-    </div>
-    <!--Header Middle End-->
-
-    <!--Header Bottom Start-->
-    <div class="header-bottom">
-        <div class="container">
-            <div class="row">
+        <!--Header Middle Start-->
+        <div class="header-middle">
+            <div class="row no-gutters">
 
                 <!--Left Start-->
-                <div class="col">
-                    <div class="primary-menu">
-                        <nav>
-                            <ul>
-                                <li class="menu-item-has-children"><a href="http://localhost:8000/">Home</a>
-                                   
-                                </li>
-                                
-                               
-                                <li class="menu-item-has-children"><a href="#">Our Firm</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="http://localhost:8000/attorneys">Attorneys</a></li>
-                                        
-                                    </ul>
-                                </li>
-                                
-                                <li class="menu-item-has-children"><a href="http://localhost:8000/shop">Shop</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="http://localhost:8000/shop">Shop</a></li>
-                                        <li><a href="http://localhost:8000/productdetail">Product Details</a></li>
-                                        <li><a href="http://localhost:8000/cart">Shopping Cart</a></li>
-                                        
-                                    </ul>
-                                </li>
-                                <li class="menu-item-has-children"><a href="#">Pages</a>
-                                    <ul class="sub-menu">
-                                        <li><a href="http://localhost:8000/about">About us</a></li>
-                                        <li><a href="http://localhost:8000/contact">Contact us 1</a></li>
-                                        <li><a href="http://localhost:8000/faq">F.A.Q</a></li>
-                                        
-                                    </ul>
-                                </li>
-                            </ul>
-                        </nav>
+                <div class="header-middle-left col-auto">
+                    <div class="header-middle-social">
+                        <a href="#"><i class="fa fa-facebook"></i></a>
+                        <a href="#"><i class="fa fa-google-plus"></i></a>
+                        <a href="#"><i class="fa fa-twitter"></i></a>
+                        <a href="#"><i class="fa fa-youtube-play"></i></a>
+                        <a href="#"><i class="fa fa-vimeo"></i></a>
                     </div>
                 </div>
                 <!--Left End-->
 
+                <!--Center Start-->
+                <div class="header-middle-center col">
+                    <div class="header-logo">
+                        <a href="{% url 'home' %}"><img src="{% static 'assets/images/logo/logo_1.png' %}" alt="Lawyer Attorneys"></a>
+                    </div>
+                </div>
+                <!--Center End-->
+
                 <!--Right Start-->
-                <div class="col-auto">
-                    <button class="header-bottom-search-toggle header-search-toggle" data-target="#fullscreen-search-overlay"><i class="fa fa-search"></i></button>
+                <div class="header-middle-right col-auto">
+                    <div class="header-middle-free-case">
+                        <a href="{% url 'contact' %}"><i class="pe-7s-culture"></i>FREE CASE EVALUATION</a>
+                    </div>
                 </div>
                 <!--Right End-->
 
             </div>
         </div>
-    </div>
-    <!--Header Bottom End-->
+        <!--Header Middle End-->
 
-</div>
-<!--Header Section End-->
+        <!--Header Bottom Start-->
+        <div class="header-bottom">
+            <div class="container">
+                <div class="row">
+
+                    <!--Left Start-->
+                    <div class="col">
+                        <div class="primary-menu">
+                            <nav>
+                                <ul>
+                                    <li class="menu-item-has-children"><a href="{% url 'home' %}">Home</a>
+                                        
+                                    </li>
+                                    
+                                   
+                                    <li class="menu-item-has-children"><a href="#">Our Firm</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'attorneys' %}">Attorneys</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    
+                                    <li class="menu-item-has-children"><a href="{% url 'shop' %}">Shop</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'shop' %}">Shop</a></li>
+                                            <li><a href="{% url 'productdetail' %}">Product Details</a></li>
+                                            <li><a href="{% url 'cart' %}">Shopping Cart</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item-has-children"><a href="#">Pages</a>
+                                        <ul class="sub-menu">
+                                            <li><a href="{% url 'about' %}">About us</a></li>
+                                            <li><a href="{% url 'contact' %}">Contact us 1</a></li>
+                                            <li><a href="{% url 'faq' %}">F.A.Q</a></li>
+                                            
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <!--Left End-->
+
+                    <!--Right Start-->
+                    <div class="col-auto">
+                        <button class="header-bottom-search-toggle header-search-toggle" data-target="#fullscreen-search-overlay"><i class="fa fa-search"></i></button>
+                    </div>
+                    <!--Right End-->
+
+                </div>
+            </div>
+        </div>
+        <!--Header Bottom End-->
+
+    </div>
+    <!--Header Section End-->
 
 
         
@@ -146,9 +147,9 @@
                     <div class="offcanvas-menu">
                         <nav>
                             <ul>
-                                <li class="menu-item-has-children"><a href="http://localhost:8000/">Home</a>
+                                <li class="menu-item-has-children"><a href="{% url 'home' %}">Home</a>
                                     <ul class="sub-menu">
-                                        <li><a href="http://localhost:8000">Homepage 01</a></li>
+                                        <li><a href="{% url 'home' %}">Homepage 01</a></li>
                                         <li><a href="index-2">Homepage 02</a></li>
                                         <li><a href="index-3">Homepage 03</a></li>
                                         <li><a href="index-4">Homepage 04</a></li>
@@ -159,8 +160,8 @@
                                 <li><a href="case-results">Case Results</a></li>
                                 <li class="menu-item-has-children"><a href="#">Our Firm</a>
                                     <ul class="sub-menu">
-                                        <li><a href="http://localhost:8000/attorneys">Attorneys</a></li>
-                                        <li><a href="http://localhost:8000/singleattorney">Single Attorney</a></li>
+                                        <li><a href="{% url 'attorneys' %}">Attorneys</a></li>
+                                        <li><a href="{% url 'singleattorney' %}">Single Attorney</a></li>
                                         <li><a href="honnors-and-awards">Honnors And Awards</a></li>
                                         <li><a href="careers">Careers</a></li>
                                     </ul>
@@ -174,10 +175,10 @@
                                 </li>
                                 <li class="menu-item-has-children"><a href="shop">Shop</a>
                                     <ul class="sub-menu">
-                                        <li><a href="http://localhost:8000/shop">Shop</a></li>
+                                        <li><a href="{% url 'shop' %}">Shop</a></li>
                                         <li><a href="shop-2-column">Shop 2 Column</a></li>
-                                        <li><a href="http://localhost:8000/productdetail">Product Details</a></li>
-                                        <li><a href="http://localhost:8000/cart">Shopping Cart</a></li>
+                                        <li><a href="{% url 'productdetail' %}">Product Details</a></li>
+                                        <li><a href="{% url 'cart' %}">Shopping Cart</a></li>
                                         <li><a href="checkout">Checkout</a></li>
                                         <li><a href="login-register">Login & Register</a></li>
                                         <li><a href="my-account">My Account</a></li>
@@ -186,10 +187,10 @@
                                 </li>
                                 <li class="menu-item-has-children"><a href="#">Pages</a>
                                     <ul class="sub-menu">
-                                        <li><a href="http://localhost:8000/about">About us</a></li>
-                                        <li><a href="http://localhost:8000/contact">Contact us 1</a></li>
+                                        <li><a href="{% url 'about' %}">About us</a></li>
+                                        <li><a href="{% url 'contact' %}">Contact us 1</a></li>
                                         <li><a href="contact-us-2">Contact us 2</a></li>
-                                        <li><a href="http://localhost:8000/faq">F.A.Q</a></li>
+                                        <li><a href="{% url 'faq' %}">F.A.Q</a></li>
                                         <li><a href="gallery">Gallery</a></li>
                                     </ul>
                                 </li>
@@ -255,7 +256,7 @@
                     <span class="content-bg-overlay wow fadeInUp" data-wow-delay="0.5s"></span>
                     <h2 class="title wow fadeInLeft" data-wow-delay="1s">Experienced <span>Attorneys</span></h2>
                     <p class="desc wow fadeInRight" data-wow-delay="1.5s">Human & Rights has been helping the seriously injured.</p>
-                    <a href="http://localhost:8000/about" class="btn btn-primary wow fadeInUp" data-wow-delay="2s">Learn More</a>
+                    <a href="{% url 'about' %}" class="btn btn-primary wow fadeInUp" data-wow-delay="2s">Learn More</a>
                 </div>
                 <!--Hero Content End-->
 
@@ -268,7 +269,7 @@
                 <!--Hero Content Start-->
                 <div class="hero-content hero-content-3">
                     <h2 class="title wow zoomIn" data-wow-delay="0.5s">London law <span>firm</span>, <br><span>Works</span> for justice</h2>
-                    <a href="http://localhost:8000/about" class="btn btn-primary wow fadeInUp" data-wow-delay="1s">Learn More</a>
+                    <a href="{% url 'about' %}" class="btn btn-primary wow fadeInUp" data-wow-delay="1s">Learn More</a>
                 </div>
                 <!--Hero Content End-->
 
@@ -373,7 +374,7 @@
                             <div class="about-content text-center">
                                 <p>The Lawyer Attorneys Firm is a general practice firm that has been serving individuals and business for over twenty years.</p>
                                 <p>Our personal injury lawyers are dedicated solely to representing people who have experienced the catastrophic injuries</p>
-                                <a href="http://localhost:8000/about" class="btn btn-primary">about us</a>
+                                <a href="{% url 'about' %}" class="btn btn-primary">about us</a>
                             </div>
 
                         </div>
@@ -435,12 +436,12 @@
                     <!--Attorney Start-->
                     <div class="col-lg-4 col-sm-6 col-12 mb-30">
                         <div class="team text-center">
-                            <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-1.jpg' %}" alt=""></a>
+                            <a href="{% url 'singleattorney' %}" class="team-image"><img src="{% static 'assets/images/team/team-1.jpg' %}" alt=""></a>
                             <div class="team-content">
                                 <h3 class="name">Kellan Dust</h3>
                                 <span class="title">BANK & FINANCIAL LAWYER</span>
                                 <p class="desc">Kellan Dust is known as a tenacious fighter who protects his client’s rights as though they are his own.</p>
-                                <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
+                                <a href="{% url 'singleattorney' %}" class="read-more">Read Profile</a>
                             </div>
                         </div>
                     </div>
@@ -449,12 +450,12 @@
                     <!--Attorney Start-->
                     <div class="col-lg-4 col-sm-6 col-12 mb-30">
                         <div class="team text-center">
-                            <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-2.jpg' %}" alt=""></a>
+                            <a href="{% url 'singleattorney' %}" class="team-image"><img src="{% static 'assets/images/team/team-2.jpg' %}" alt=""></a>
                             <div class="team-content">
                                 <h3 class="name">Laura Griffin</h3>
                                 <span class="title">FAMILY LAWYER</span>
                                 <p class="desc">Laura Griffin has a track record of recovery in civil matters. She is a protector of individual rights.</p>
-                                <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
+                                <a href="{% url 'singleattorney' %}" class="read-more">Read Profile</a>
                             </div>
                         </div>
                     </div>
@@ -463,12 +464,12 @@
                     <!--Attorney Start-->
                     <div class="col-lg-4 col-sm-6 col-12 mb-30">
                         <div class="team text-center">
-                            <a href="http://localhost:8000/singleattorney" class="team-image"><img src="{% static 'assets/images/team/team-3.jpg' %}" alt=""></a>
+                            <a href="{% url 'singleattorney' %}" class="team-image"><img src="{% static 'assets/images/team/team-3.jpg' %}" alt=""></a>
                             <div class="team-content">
                                 <h3 class="name">Joseph Steward</h3>
                                 <span class="title">BUSINESS LAWYER</span>
                                 <p class="desc">Joseph Steward is an experienced lawyer who has many years dealing with business cases.</p>
-                                <a href="http://localhost:8000/singleattorney" class="read-more">Read Profile</a>
+                                <a href="{% url 'singleattorney' %}" class="read-more">Read Profile</a>
                             </div>
                         </div>
                     </div>
@@ -658,59 +659,10 @@
                 </div>
                 <!--Funfact Section End-->
 
-                <!--News Section Start-->
-                <div class="col-lg-6 col-12 section-padding home-news-wrap border-left">
+               
+                       
 
                     
-                    <div class="row no-gutters mbn-30">
-
-                        <!--About Feature (News/Blog) Start-->
-                        <div class="col-sm-6 col-12">
-                            <div class="news2">
-                                <div class="inner">
-
-                                    <div class="news2-media">
-                                        <div class="image"><img src="{% static 'assets/images/news/news-3.jpg' %}" alt=""></div>
-                                        <a href="news-details" class="read-more">read more</a>
-                                        <a href="news-details" class="external-link"><i class="fa fa-external-link"></i></a>
-                                    </div>
-
-                                    <div class="news2-content">
-                                        <h3 class="title h3"><a href="news-details">EB-5 Legislation Pending</a></h3>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!--About Feature (News2/Blog) End-->
-
-                        <!--About Feature (News/Blog) Start-->
-                        <div class="col-sm-6 col-12">
-                            <div class="news2">
-                                <div class="inner">
-
-                                    <div class="news2-media">
-                                        <div class="image"><img src="{% static 'assets/images/news/news-4.jpg' %}" alt=""></div>
-                                        <a href="news-details" class="read-more">read more</a>
-                                        <a href="news-details" class="external-link"><i class="fa fa-external-link"></i></a>
-                                    </div>
-
-                                    <div class="news2-content">
-                                        <h3 class="title h3"><a href="news-details">Personal Injury Case Settled</a></h3>
-                                    </div>
-
-                                </div>
-                            </div>
-                        </div>
-                        <!--About Feature (News2/Blog) End-->
-
-                    </div>
-                </div>
-                <!--News Section End-->
-
-            </div>
-        </div>
-        <!--Funfact & News Section End-->
 
         <div class="newsletter-socail-section section" data-bg-image="{% static 'assets/images/bg/newsletter-bg.png">
             <div class="container">
@@ -772,10 +724,10 @@
                         <ul class="footer-widget-link">
                             
                             <li><a href="case-results">Case Results</a></li>
-                            <li><a href="http://localhost:8000/about">Our Firm</a></li>
+                            <li><a href="{% url 'about' %}">Our Firm</a></li>
                             <li><a href="careers">Careers</a></li>
-                            <li><a href="http://localhost:8000/faq">F.A.Q</a></li>
-                            <li><a href="http://localhost:8000/contact">Contact Us</a></li>
+                            <li><a href="{% url 'faq' %}">F.A.Q</a></li>
+                            <li><a href="{% url 'contact' %}">Contact Us</a></li>
                         </ul>
                     </div>
                     <!--Footer Widget End-->
